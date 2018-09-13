@@ -2,146 +2,145 @@
 GLOBAL
 =============================================*/
 
-*{
-	margin:0px;
-	padding:0px;
-	list-style: none;
-	text-decoration: none;
-	font-family: 'Ubunt', sans-serif;
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
 }
 
-ul, ol{
-	padding:0px;
+ul, ol {
+    padding: 0px;
 }
 
-a:visited, a:link, a:focus, a:hover, a:active{
-	list-style: none;
-	text-decoration: none;
+a:visited, a:link, a:focus, a:hover, a:active {
+    list-style: none;
+    text-decoration: none;
 }
 
-.barraSuperior{
-	background:black;
+.barraSuperior {
+    background: black;
 }
 
-.barraSuperior a{
-	color:white;
+.barraSuperior a {
+    color: white;
 }
 
-.backColor, .backColor a{
-	background:#47bac1;
-	color:white;
+.backColor, .backColor a {
+    background: #47bac1;
+    color: white;
 }
 
 /*=============================================
 REDES SOCIALES
 =============================================*/
 
-.redSocial{
-	width:30px;
-	height:30px;
-	text-align: center;
-	line-height:30px;
+.redSocial {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
 }
 
 /*FACEBOOK*/
 
-.facebookBlanco{
-	color:white;
+.facebookBlanco {
+    color: white;
 }
 
-.facebookNegro{
-	color:black;
+.facebookNegro {
+    color: black;
 }
 
-.facebookColor{
-	color:white;
-	background:#46639f;
+.facebookColor {
+    color: white;
+    background: #46639f;
 }
 
 /*YOUTUBE*/
 
-.youtubeColor{
-	color:white;
-	background:#d6513e;
+.youtubeColor {
+    color: white;
+    background: #d6513e;
 }
 
-.youtubeBlanco{
-	color:white;
+.youtubeBlanco {
+    color: white;
 }
 
-.youtubeNegro{
-	color:black;
+.youtubeNegro {
+    color: black;
 }
 
 /*TWITTER*/
 
-.twitterColor{
-	color:white;
-	background:#0ab2e6;
+.twitterColor {
+    color: white;
+    background: #0ab2e6;
 }
 
-.twitterBlanco{
-	color:white;
+.twitterBlanco {
+    color: white;
 }
 
-.twitterNegro{
-	color:black;
+.twitterNegro {
+    color: black;
 }
 
 /*GOOGLE PLUS*/
 
-.googleColor{
-	color:white;
-	background:#d71617;
+.googleColor {
+    color: white;
+    background: #d71617;
 }
 
-.googleBlanco{
-	color:white;
+.googleBlanco {
+    color: white;
 }
 
-.googleNegro{
-	color:black;
+.googleNegro {
+    color: black;
 }
 
 /*INSTAGRAM*/
 
-.instagramColor{
-	color:white;
-	background:linear-gradient(45deg, #fca925, #ee1d5f,  #6350a2);
+.instagramColor {
+    color: white;
+    background: linear-gradient(45deg, #fca925, #ee1d5f, #6350a2);
 
 }
 
-.instagramBlanco{
-	color:white;
+.instagramBlanco {
+    color: white;
 }
 
-.instagramNegro{
-	color:black;
+.instagramNegro {
+    color: black;
 }
 
 /*=============================================
 ERROR 404
 =============================================*/
 
-.error404{
-	color:#333;
+.error404 {
+    color: #333;
 }
-
 
 /*=============================================
 ESCRITORIO GRANDE (LG revisamos en 1366px en adelante)
 =============================================*/
 
-@media (min-width:1200px){
+@media (min-width: 1200px) {
 
-	.col-lg-0{
-		display: none;
-	}
+    .col-lg-0 {
+        display: none;
+    }
 
-	.error404 h1{
-		font-size:300px;
-		text-shadow:8px 8px 1px #dadada;
-	}
+    .error404 h1 {
+        font-size: 300px;
+        text-shadow: 8px 8px 1px #dadada;
+    }
 
 }
 
@@ -149,16 +148,16 @@ ESCRITORIO GRANDE (LG revisamos en 1366px en adelante)
 ESCRITORIO MEDIANO O TABLET HORIZONTAL (MD revisamos en 1024px)
 =============================================*/
 
-@media (max-width:1199px) and (min-width:992px){
+@media (max-width: 1199px) and (min-width: 992px) {
 
-	.col-md-0{
-		display: none;
-	}
+    .col-md-0 {
+        display: none;
+    }
 
-	.error404 h1{
-		font-size:200px;
-		text-shadow:6px 6px 1px #dadada;
-	}
+    .error404 h1 {
+        font-size: 200px;
+        text-shadow: 6px 6px 1px #dadada;
+    }
 
 }
 
@@ -166,16 +165,16 @@ ESCRITORIO MEDIANO O TABLET HORIZONTAL (MD revisamos en 1024px)
 ESCRITORIO PEQUEÑO O TABLET VERTICAL (SM revisamos en 768px)
 =============================================*/
 
-@media (max-width:991px) and (min-width:768px){
+@media (max-width: 991px) and (min-width: 768px) {
 
-	.col-sm-0{
-		display: none;
-	}
+    .col-sm-0 {
+        display: none;
+    }
 
-	.error404 h1{
-		font-size:150px;
-		text-shadow:4px 4px 1px #dadada;
-	}
+    .error404 h1 {
+        font-size: 150px;
+        text-shadow: 4px 4px 1px #dadada;
+    }
 
 }
 
@@ -183,15 +182,15 @@ ESCRITORIO PEQUEÑO O TABLET VERTICAL (SM revisamos en 768px)
 MOVIL (XS revisamos en 320px)
 =============================================*/
 
-@media (max-width:767px){
+@media (max-width: 767px) {
 
-	.col-xs-0{
-		display: none;
-	}
+    .col-xs-0 {
+        display: none;
+    }
 
-	.error404 h1{
-		font-size:75px;
-		text-shadow:2px 2px 1px #dadada;
-	}
+    .error404 h1 {
+        font-size: 75px;
+        text-shadow: 2px 2px 1px #dadada;
+    }
 
 }

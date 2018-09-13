@@ -12,39 +12,123 @@ magnam nam nisi numquam odit quaerat, repellat, rerum sint sunt ullam, voluptate
     <meta name="keyword" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad aliquam commodi consequuntur dolor facilis incidunt
 magnam nam nisi numquam odit quaerat, repellat, rerum sint sunt ullam, voluptatem voluptatibus. Labore?">
 
-    <title>Tienda online</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
+
+    <title> Tienda | Online</title>
+
+    <?php
+
+    $icon = templateController::ctrStyleTemplate();
+
+    $route = new routes();
+    $pathFrontEnd = $route->selectRoute();
+    $pathBackEnd = $route->selectRoute('backend');
+
+    ?>
+
+    <link rel="icon"
+          href="http://localhost:8080/Udemy/carrito-compras-php/backend/views/img/template/<?php echo $icon['icono'] ?>">
 
     <!-- css bootstrap min -->
-    <link rel="stylesheet" href="views/css/plugins/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo $pathFrontEnd; ?>views/css/plugins/bootstrap.min.css">
 
     <!-- css font awesome -->
 
-    <link rel="stylesheet" href="views/css/plugins/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php echo $pathFrontEnd; ?>views/css/plugins/font-awesome.min.css">
 
 
     <!-- css custom -->
 
-    <link rel="stylesheet" href="views/css/global.css">
+    <link rel="stylesheet" href="<?php echo $pathFrontEnd; ?>views/css/global.css">
+
+
+    <link rel="stylesheet" href="<?php echo $pathFrontEnd; ?>views/css/productos.css">
 
     <!-- css header -->
-    <link rel="stylesheet" href="views/css/header.css">
+    <link rel="stylesheet" href="<?php echo $pathFrontEnd; ?>views/css/header.css">
+
+    <!-- slide css -->
+
+    <link rel="stylesheet" href="<?php echo $pathFrontEnd; ?>views/css/slide.css">
 
 
     <!-- Plugin jquery -->
 
-    <script src="views/js/plugins/jquery.min.js"></script>
+    <script src="<?php echo $pathFrontEnd; ?>views/js/plugins/jquery.min.js"></script>
 
     <!-- Plugin bootstrap min -->
 
-    <script src="views/js/plugins/bootstrap.min.js"></script>
+    <script src="<?php echo $pathFrontEnd; ?>views/js/plugins/bootstrap.min.js"></script>
 
 </head>
 <body>
 
 <!-- Include header module -->
-<?php include 'modules/header.php'; ?>
+<?php include 'modules/header.php';
 
-<script src="views/js/cabezote.js"></script>
+$paths = [];
+$path = null;
+
+if (isset($_GET['path'])) {
+
+    $paths = explode('/', $_GET['path']);
+
+
+    //Value from the database
+    $item = 'ruta';
+    $value = $_GET['path'];
+
+    //Obtain all pathFrontEnd from the category
+
+    $routesCategories = productsController::requestCategories($item, $value);
+
+    if ($paths[0] == $routesCategories['ruta']) {
+
+        $path = $paths[0];
+    }
+
+    //Obtain all pathFrontEnd from the subcategories
+
+    $routesSubCategories = productsController::requestSubCategories($item, $value);
+
+    foreach ($routesSubCategories as $key => $value) {
+
+        if ($paths[0] == $value['ruta']) {
+            $path = $paths[0];
+        }
+
+    }
+
+    if ($path != null) {
+
+        echo $path;
+
+        include 'modules/products.php';
+    } else {
+
+        include 'modules/404.php';
+
+    }
+
+} else {
+
+    include 'modules/slide.php';
+    include 'modules/destacados.php';
+}
+
+?>
+
+<script src="<?php echo $pathFrontEnd; ?>views/js/cabezote.js"></script>
+
+<script src="<?php echo $pathFrontEnd; ?>views/js/plantilla.js"></script>
+
+<script src="<?php echo $pathFrontEnd; ?>views/js/slide.js"></script>
+
+<script src="<?php echo $pathFrontEnd; ?>views/js/plugins/jquery.easing.js"></script>
+
 
 </body>
 </html>
