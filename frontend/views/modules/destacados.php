@@ -35,10 +35,209 @@
 
 <div class="container-fluid productos">
     <div class="container">
-        <div class="row">
-            <div class="col-xs-12 tituloDestacado">
 
-            </div>
+        <div class="row">
+            <!-- Title -->
+            <div class="col-xs-12 tituloDestacado"><!----Titulo destacado----->
+
+
+                <div class="col-sm-6 col-xs-12">
+
+                    <h1>
+                        <small>ART&Iacute;CULOS GRATUITOS</small>
+                    </h1>
+
+                </div>
+
+                <div class="col-sm-6 col-xs-12">
+                    <a href="articulos-gratis">
+                        <button class="btn btn-default backColor pull-right">
+                            VER MAS <span class="fa fa-chevron-right"></span>
+                        </button>
+                    </a>
+                </div>
+
+            </div><!-- . titulo destacado-->
+        </div>
+
+        <div><!-- Vitrina en cuadricula -->
+
+            <ul class="grid0">
+
+                <!--Producto 1-->
+
+                <li class="col-md-3 col-sm-6 col-xs-12">
+                    <figure>
+                        <a href="#">
+                            <img src="<?php echo $pathBackEnd; ?>/views/img/productos/accesorios/accesorio04.jpg"
+                                 class="img-responsive">
+                        </a>
+                    </figure>
+
+                    <h4> <!-- Titulo -->
+                        <small>
+                            <a href="#" class="pixelProducto">
+
+                                Collar de diamantes<br>
+
+                            </a>
+                        </small>
+                    </h4>
+
+                    <div class="col-xs-6 precio"> <!-- Precio -->
+                        <h2>
+                            <small>GRATIS</small>
+                        </h2>
+                    </div>
+
+                    <div class="col-xs-6 enlaces"><!-- Botones  -->
+                        <div class="btn-group pull-right">
+                            <button type="button" class="btn btn-default btn-xs deseos" idProductos="470"
+                                    data-toggle="tooltip" title="Agregar a mi lista de deseos">
+                                <i class="fa fa-heart" aria-hidden="true"></i>
+                            </button>
+
+                            <a href="#" class="pixelProducto">
+                                <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip"
+                                        title="Ver producto">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+
+                </li>
+
+                <!--Producto 2-->
+
+                <li class="col-md-3 col-sm-6 col-xs-12">
+                    <figure>
+                        <a href="#">
+                            <img src="<?php echo $pathBackEnd; ?>/views/img/productos/accesorios/accesorio03.jpg"
+                                 class="img-responsive">
+                        </a>
+                    </figure>
+
+                    <h4> <!-- Titulo -->
+                        <small>
+                            <a href="#" class="pixelProducto">
+
+                                Mochila gris<br>
+
+                            </a>
+                        </small>
+                    </h4>
+
+                    <div class="col-xs-6 precio"> <!-- Precio -->
+                        <h2>
+                            <small>GRATIS</small>
+                        </h2>
+                    </div>
+
+                    <div class="col-xs-6 enlaces"><!-- Botones  -->
+                        <div class="btn-group pull-right">
+                            <button type="button" class="btn btn-default btn-xs deseos" idProductos="470"
+                                    data-toggle="tooltip" title="Agregar a mi lista de deseos">
+                                <i class="fa fa-heart" aria-hidden="true"></i>
+                            </button>
+
+                            <a href="#" class="pixelProducto">
+                                <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip"
+                                        title="Ver producto">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+
+                </li>
+                <li class="col-md-3 col-sm-6 col-xs-12">
+                    <figure>
+                        <a href="#">
+                            <img src="<?php echo $pathBackEnd; ?>/views/img/productos/accesorios/accesorio02.jpg"
+                                 class="img-responsive">
+                        </a>
+                    </figure>
+
+                    <h4> <!-- Titulo -->
+                        <small>
+                            <a href="#" class="pixelProducto">
+
+                                Mochila militar<br>
+
+                            </a>
+                        </small>
+                    </h4>
+
+                    <div class="col-xs-6 precio"> <!-- Precio -->
+                        <h2>
+                            <small>GRATIS</small>
+                        </h2>
+                    </div>
+
+                    <div class="col-xs-6 enlaces"><!-- Botones  -->
+                        <div class="btn-group pull-right">
+                            <button type="button" class="btn btn-default btn-xs deseos" idProductos="470"
+                                    data-toggle="tooltip" title="Agregar a mi lista de deseos">
+                                <i class="fa fa-heart" aria-hidden="true"></i>
+                            </button>
+
+                            <a href="#" class="pixelProducto">
+                                <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip"
+                                        title="Ver producto">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+
+                </li>
+                <li class="col-md-3 col-sm-6 col-xs-12">
+                    <figure>
+                        <a href="#">
+                            <img src="<?php echo $pathBackEnd; ?>/views/img/productos/accesorios/accesorio01.jpg"
+                                 class="img-responsive">
+                        </a>
+                    </figure>
+
+                    <h4> <!-- Titulo -->
+                        <small>
+                            <a href="#" class="pixelProducto">
+
+                               Pulsera dorada<br>
+
+                            </a>
+                        </small>
+                    </h4>
+
+                    <div class="col-xs-6 precio"> <!-- Precio -->
+                        <h2>
+                            <small>GRATIS</small>
+                        </h2>
+                    </div>
+
+                    <div class="col-xs-6 enlaces"><!-- Botones  -->
+                        <div class="btn-group pull-right">
+                            <button type="button" class="btn btn-default btn-xs deseos" idProductos="470"
+                                    data-toggle="tooltip" title="Agregar a mi lista de deseos">
+                                <i class="fa fa-heart" aria-hidden="true"></i>
+                            </button>
+
+                            <a href="#" class="pixelProducto">
+                                <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip"
+                                        title="Ver producto">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+
+                </li>
+            </ul>
         </div>
     </div>
 </div>
