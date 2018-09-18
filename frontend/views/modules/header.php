@@ -83,7 +83,7 @@
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     </button>
                 </a>
-                <p>TU CARRITO <span class="cantidadCesta"></span><br>USD $ <span class="sumaCesta"></span></p>
+                <p>TU CARRITO <span class="cantidadCesta"></span><br>USD $50.00 <span class="sumaCesta"></span></p>
             </div>
         </div>
 

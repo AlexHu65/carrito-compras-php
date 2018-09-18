@@ -99,18 +99,14 @@ if (isset($_GET['path'])) {
         if ($paths[0] == $value['ruta']) {
             $path = $paths[0];
         }
-
     }
 
     if ($path != null) {
-
-        echo $path;
 
         include 'modules/products.php';
     } else {
 
         include 'modules/404.php';
-
     }
 
 } else {

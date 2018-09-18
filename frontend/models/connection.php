@@ -1,13 +1,13 @@
 <?php
 
 
-require_once './config/database.php';
+require_once './config/db.php';
 
 class connection
 {
     public static function connect()
     {
-        $conn = new database();
+        $conn = new db();
         return $conn->getConnection();
     }
 

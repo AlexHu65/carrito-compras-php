@@ -1,12 +1,12 @@
 <?php
 
+
 /**
- * Created by PhpStorm.
- * User: alejandro.chavez
- * Date: 9/17/2018
- * Time: 6:01 PM
+ * Config database file
+ * Class db
  */
-class database
+
+class db
 {
 
     private $host = 'localhost';

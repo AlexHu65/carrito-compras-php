@@ -1,11 +1,5 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: alejandro.chavez
- * Date: 8/29/2018
- * Time: 11:38 AM
- */
 class templateController
 {
 

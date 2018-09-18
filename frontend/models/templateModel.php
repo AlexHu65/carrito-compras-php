@@ -5,7 +5,6 @@ require_once 'connection.php';
 class templateModel
 {
 
-    //Un metodo estatico se define cuando recibira parametros en sus parentesis
 
     static public function mdlStyleTemplate($table)
     {
