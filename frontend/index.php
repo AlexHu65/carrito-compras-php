@@ -16,6 +16,9 @@ require_once 'models/slideModel.php';
 require_once 'config/routes.php';
 
 
+
+
+
 /*Render vies and template*/
 $template = new templateController();
 $template->template();

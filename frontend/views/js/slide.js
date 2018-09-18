@@ -1,4 +1,3 @@
-
 /*Objects slide*/
 var item = 0;
 var paginacion = $("#paginacion #item-pagination");
@@ -16,8 +15,8 @@ var play = true;
 $(imgProduct[item]).animate({"top": -10 + "%", "opacity": 0}, 100);
 $(imgProduct[item]).animate({"top": 30 + "px", "opacity": 1}, 600);
 
-$("#slide ul li").css({"width": 100/$("#slide ul li").length + "%"});
-$("#slide ul").css({"width": $("#slide ul li").length*100 + "%"});
+$("#slide ul li").css({"width": 100 / $("#slide ul li").length + "%"});
+$("#slide ul").css({"width": $("#slide ul li").length * 100 + "%"});
 
 
 //Pagination
