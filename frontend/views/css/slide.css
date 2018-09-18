@@ -209,10 +209,10 @@
 }
 
 #btnSlide {
-    width: 100%;
-    height: 50px;
+    width: 20%;
+    height: 20px;
     border: 0px;
-    opacity: 1;
+    opacity: 0;
     font-size: 25px;
     padding: 2px;
     transition: .5s;
@@ -221,6 +221,7 @@
 }
 
 #btnSlide:hover {
+    height: 50px;
     opacity: 1;
     transition: .5s;
     -webkit-transition: .5s;

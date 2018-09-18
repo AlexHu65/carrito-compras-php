@@ -125,6 +125,8 @@ if (isset($_GET['path'])) {
 
 <script src="<?php echo $pathFrontEnd; ?>views/js/plugins/jquery.easing.js"></script>
 
+<script src="<?php echo $pathFrontEnd; ?>views/js/plugins/jquery.scrollUp.js"></script>
+
 
 </body>
 </html>
