@@ -1,4 +1,4 @@
-<ul style="display: none;" class="grid0">
+<ul  class="grid0">
     <!--Producto 1-->
     <li class="col-md-3 col-sm-6 col-xs-12">
         <figure>

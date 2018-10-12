@@ -500,7 +500,7 @@
         },
 
         /**
-         * Appends slider template to a DOM
+         * Appends slider ctrTemplate to a DOM
          */
         append: function () {
             var container_html = '<span class="irs js-irs-' + this.plugin_count + ' ' + this.options.extra_classes + '"></span>';

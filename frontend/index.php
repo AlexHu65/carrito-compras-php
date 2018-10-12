@@ -13,12 +13,12 @@ require_once 'models/productsModel.php';
 require_once 'models/slideModel.php';
 
 /*Config files*/
-require_once 'config/routes.php';
+require_once 'config/routing.php';
+require_once 'config/validators.php';
 
 
-
-
-
-/*Render vies and template*/
+/*Render vies and ctrTemplate*/
 $template = new templateController();
+
+
 $template->template();

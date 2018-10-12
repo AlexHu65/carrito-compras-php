@@ -1,4 +1,4 @@
-<ul class="list2"">
+<ul style="display: none;" class="list2"">
 
     <!-- PRODUCTO 1 -->
 

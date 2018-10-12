@@ -76,7 +76,7 @@ window['PR_SHOULD_USE_CONTINUATION'] = true;
       "concept,concept_map,const_cast,constexpr,decltype," +
       "dynamic_cast,explicit,export,friend,inline,late_check," +
       "mutable,namespace,nullptr,reinterpret_cast,static_assert,static_cast," +
-      "template,typeid,typename,using,virtual,where"];
+      "ctrTemplate,typeid,typename,using,virtual,where"];
   var JAVA_KEYWORDS = [COMMON_KEYWORDS,
       "abstract,boolean,byte,extends,final,finally,implements,import," +
       "instanceof,null,native,package,strictfp,super,synchronized,throws," +

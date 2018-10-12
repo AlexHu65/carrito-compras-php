@@ -1,4 +1,4 @@
-<ul class="list0">
+<ul style="display: none;" class="list0">
     <!--------------------------Producto1---------------------->
     <li class="col-xs-12">
         <!------------------------Miniatura------------------------------>

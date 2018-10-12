@@ -8,7 +8,7 @@ var http = require('http'), fs = require('fs'), mimeTypes = {
   'html': 'text/html',
   'css': 'text/css',
   'js': 'text/javascript',
-  'json': 'application/json',
+  'json': 'application/socialnetwork',
   'png': 'image/png',
   'jpg': 'image/jpg'
 };

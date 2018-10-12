@@ -1,118 +1,187 @@
 /*=============================================
 TOP
 =============================================*/
+/*.barraSuperior{
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}*/
 
-#top ul{
-	padding-top:8px;
+#top ul {
+    padding-top: 8px;
 }
 
-#top ul li{
-	display:inline;
-	line-height:30px;
-	margin:0px 5px;
-	color:white;
+#top ul li {
+    display: inline;
+    line-height: 30px;
+    margin: 0px 5px;
+    color: white;
 }
 
-.social ul li a i{
-	font-size:18px;
-	margin:0 1px;
+.social ul li a i {
+    font-size: 18px;
+    margin: 0 1px;
 }
 
-.registro ul{
-	text-align: right;
-	font-size:12px;
+.registro ul {
+    text-align: right;
+    font-size: 12px;
 }
 
 /*=============================================
 HEADER
 =============================================*/
 
-header #btnCategorias{
-	margin:20px 0;
+header #btnCategorias {
+    margin: 20px 0;
 }
 
-header #btnCategorias p{
-	line-height:40px;
-	margin-bottom:0px;
-	cursor: pointer;
+header #btnCategorias p {
+    line-height: 50px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    width: 100%;
 }
 
-header #btnCategorias p span{
-	cursor: pointer;
+header #btnCategorias p span {
+    cursor: pointer;
 }
 
-header #buscador{
-	margin:20px 0;
+header #buscador {
+    margin: 20px 0;
 }
 
-header #buscador input{
-	padding:19px;
-	border-radius:0;
+header #buscador input {
+    padding: 19px;
+    border-radius: 0;
 }
 
-header #buscador button{
-	padding:9px;
-	border:1px solid silver;
-	border-radius:0;
+header #buscador button {
+    padding: 9px;
+    border: 1px solid silver;
+    border-radius: 0;
 }
 
-header #carrito{
-	margin:20px 0;
+header #carrito {
+    margin: 20px 0;
 }
 
-header #carrito button{
-	padding:9px 15px;
-	border:1px solid silver;
-	border-radius:0;
+header #carrito button {
+    padding: 9px 15px;
+    border: 1px solid silver;
+    border-radius: 0;
 }
 
-header #carrito p{
-	padding:2px;
-	padding-left:60px;
-	border:1px solid #aaa;
-	font-size:12px;
+header #carrito p {
+    padding: 2px;
+    padding-left: 60px;
+    border: 1px solid #aaa;
+    font-size: 12px;
 }
 
-header #categorias{
-	display:none;
-	margin-top:-10px;
-	position: relative;
-	padding-bottom:20px;
+header #categorias {
+    display: none;
+    margin-top: -10px;
+    position: relative;
+    padding-bottom: 20px;
+    /*background-color: #e8ecf1;*/
+    color: #0a0a0a;
 }
 
-header #categorias h4{
-	margin-top:20px;
-	margin-bottom:-10px;
+header #categorias a {
+    color: #0a0a0a;
 }
 
-header #categorias hr{
-	border:1px solid rgba(255,255,255,.3);
+header #categorias h4 {
+    margin-top: 20px;
+    margin-bottom: -10px;
+}
+
+header #categorias hr {
+    border: 1px solid rgba(255, 255, 255, .3);
 }
 
 header #categorias li {
-	font-size: medium;
-	padding: 2px;
+    font-size: small;
+    font-weight: lighter;
+    padding: 3px;
 }
 
+header #btnCategorias {
+    width: 100%;
+    background-color: #e8ecf1;
+    border-radius: 25px;
+}
+
+header .limiter {
+    background-color: #81cfe0;
+}
+
+.registro #searchButton {
+    border: 0;
+    background-color: transparent;
+    color: inherit;
+}
+
+/*=============================================
+EDITAR SEARCH MODAL
+=============================================*/
+
+body.modal-open .supreme-container {
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+
+}
+
+.modal-content {
+    border: 0;
+    border-radius: 0;
+    padding: 10px;
+    position: relative;
+}
+
+.modal-header h4 {
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+.modal-body input {
+    border-radius: 30px;
+    background-color: gainsboro;
+    color: #595959;
+    font-style: italic;
+}
+
+.modal-body button {
+    border: 0;
+    margin-left: 15px;
+    background-color: #dcdcdc;
+    color: darkslategray;
+    border-radius: 30px;
+}
 
 /*=============================================
 ESCRITORIO GRANDE (LG revisamos en 1366px en adelante)
 =============================================*/
 
-@media (min-width:1200px){
+@media (min-width: 1200px) {
 
-	/*=============================================
-	HEADER
-	=============================================*/
+    /*=============================================
+    HEADER
+    =============================================*/
+    header #logotipo img {
+        margin-top: 10px;
+        padding: 20px 10px;
+        padding-left: 0px;
+    }
 
-	header #logotipo img{
-		padding:20px 60px;
-		padding-left:0px;
-	}
-
-	header #carrito{
-		padding-left:100px;
-	}
+    header #carrito {
+        padding-left: 100px;
+    }
 
 }
 
@@ -120,20 +189,20 @@ ESCRITORIO GRANDE (LG revisamos en 1366px en adelante)
 ESCRITORIO MEDIANO O TABLET HORIZONTAL (MD revisamos en 1024px)
 =============================================*/
 
-@media (max-width:1199px) and (min-width:992px){
+@media (max-width: 1199px) and (min-width: 992px) {
 
-	/*=============================================
-	HEADER
-	=============================================*/
+    /*=============================================
+    HEADER
+    =============================================*/
+    header #logotipo img {
+        margin-top: 10px;
+        padding: 25px 10px;
+        padding-left: 0px;
+    }
 
-	header #logotipo img{
-		padding:25px 60px;
-		padding-left:0px;
-	}
-
-	header #carrito{
-		padding-left:70px;
-	}
+    header #carrito {
+        padding-left: 70px;
+    }
 
 }
 
@@ -141,23 +210,23 @@ ESCRITORIO MEDIANO O TABLET HORIZONTAL (MD revisamos en 1024px)
 ESCRITORIO PEQUEÑO O TABLET VERTICAL (SM revisamos en 768px)
 =============================================*/
 
-@media (max-width:991px) and (min-width:768px){
+@media (max-width: 991px) and (min-width: 768px) {
 
-	/*=============================================
-	HEADER
-	=============================================*/
+    /*=============================================
+    HEADER
+    =============================================*/
+    header #logotipo img {
+        margin-top: 10px;
+        padding: 30px 0px;
+    }
 
-	header #logotipo img{
-		padding:30px 0px;
-	}
+    header #carrito {
+        padding-left: 55px;
+    }
 
-	header #carrito{
-		padding-left:55px;
-	}
-
-	header #carrito p{
-		display:none;
-	}
+    header #carrito p {
+        display: none;
+    }
 
 }
 
@@ -165,39 +234,37 @@ ESCRITORIO PEQUEÑO O TABLET VERTICAL (SM revisamos en 768px)
 MOVIL (XS revisamos en 320px)
 =============================================*/
 
-@media (max-width:767px){
+@media (max-width: 767px) {
 
-	/*=============================================
-	TOP
-	=============================================*/
+    /*=============================================
+    TOP
+    =============================================*/
+    #top ul {
+        text-align: center;
+    }
 
-	#top ul{
-		text-align: center;
-	}
+    #top #registro {
+        border-top: 1px solid #222;
+    }
 
-	#top #registro{
-		border-top:1px solid #222;
-	}
-	
-	/*=============================================
-	HEADER
-	=============================================*/
+    /*=============================================
+    HEADER
+    =============================================*/
+    header #logotipo img {
+        padding: 30px;
+        padding-bottom: 10px;
+    }
 
-	header #logotipo img{
-		padding:30px;
-		padding-bottom:10px;
-	}
+    header #categorias {
+        margin-bottom: 10px;
+    }
 
-	header #categorias{
-		margin-bottom:10px;
-	}
+    header #buscador {
+        margin-bottom: 10px;
+    }
 
-	header #buscador{
-		margin-bottom:10px;
-	}
+    header #carrito {
+        margin: 0px;
+    }
 
-	header #carrito{
-		margin:0px;
-	}
-	
 }

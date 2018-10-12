@@ -52,7 +52,7 @@ gulp.task('build', function(){
 /*
  *	Usage : gulp bump
  *	Prompts: Version increment to bump
- *	Output: - New version number written into package.json & bower.json
+ *	Output: - New version number written into package.socialnetwork & bower.socialnetwork
  */
 
 gulp.task('bump', function(complete){

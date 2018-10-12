@@ -2999,7 +2999,7 @@
         return this.isValid() ? this._isUTC && this._offset === 0 : false;
     }
 
-    // ASP.NET json date format regex
+    // ASP.NET socialnetwork date format regex
     var aspNetRegex = /^(\-|\+)?(?:(\d*)[. ])?(\d+)\:(\d+)(?:\:(\d+)(\.\d*)?)?$/;
 
     // from http://docs.closure-library.googlecode.com/git/closure_goog_date_date.js.source.html

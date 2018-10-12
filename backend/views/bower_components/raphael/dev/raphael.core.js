@@ -5228,7 +5228,7 @@ define(["eve"], function(eve) {
      **
      > Parameters
      **
-     - json (array)
+     - socialnetwork (array)
      = (object) resulting set of imported elements
      > Usage
      | paper.add([
@@ -5297,7 +5297,7 @@ define(["eve"], function(eve) {
      > Parameters
      **
      - token (string) string to format
-     - json (object) object which properties will be used as a replacement
+     - socialnetwork (object) object which properties will be used as a replacement
      = (string) formated string
      > Usage
      | // this will draw a rectangular shape equivalent to "M10,20h40v50h-40z"

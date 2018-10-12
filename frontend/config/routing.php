@@ -1,22 +1,8 @@
 <?php
 
 
-class routes
+class routing
 {
-    /**
-     * Select route
-     * @param string $environment
-     * @return string
-     */
-
-    public function selectRoute($environment = 'frontend')
-    {
-        if ($environment == 'backend') {
-            return self::selectRouteBackEnd();
-        }
-        return self::selectRouteFrontEnd();
-    }
-
     /**
      * Return front end
      * @return string

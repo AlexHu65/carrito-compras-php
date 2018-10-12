@@ -8,7 +8,7 @@ import { cloneWithOffset } from '../units/offset';
 import { createLocal } from '../create/local';
 import { createInvalid as invalid } from './valid';
 
-// ASP.NET json date format regex
+// ASP.NET socialnetwork date format regex
 var aspNetRegex = /^(\-|\+)?(?:(\d*)[. ])?(\d+)\:(\d+)(?:\:(\d+)(\.\d*)?)?$/;
 
 // from http://docs.closure-library.googlecode.com/git/closure_goog_date_date.js.source.html

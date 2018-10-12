@@ -51,9 +51,19 @@ BANNER
 BARRA PRODUCTOS
 =============================================*/
 
-.barraProductos .organizarProductos span{
-    margin-left:5px;
+.barraProductos {
+    padding: 15px;
 }
+
+.barraProductos .organizarProductos button{
+
+    margin-left: 5px;
+    border: 0;
+}
+.barraProductos .ordenarProductos button{
+    border: 0;
+}
+
 
 /*=============================================
 VITRINA PRODUCTOS CUADRÍCULA
@@ -135,6 +145,25 @@ VITRINA PRODUCTOS LISTA
 .fontSize{
     font-size:11px;
 }
+
+
+/*=============================================
+TITULO DE PRODUCTOS
+=============================================*/
+
+
+.tituloDestacado button {
+    margin-left: 5px;
+    border: 0;
+}
+
+
+
+/*=============================================
+EDITAR PAGINACIONM
+=============================================*/
+
+
 
 
 /*=============================================
@@ -243,6 +272,18 @@ MOVIL (XS revisamos en 320px)
     .productos ul li h1 small{
         font-size:16px;
     }
+
+
+    .tituloDestacado .btnGrid{
+        display: none;
+
+    }
+
+    .tituloDestacado .btnList{
+        display: none;
+
+    }
+
 
 
 }

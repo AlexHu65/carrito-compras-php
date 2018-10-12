@@ -1,5 +1,4 @@
 <!-- Top header -->
-
 <div class="container-fluid barraSuperior" id="top">
 
     <div class="container-container">
@@ -9,12 +8,9 @@
             <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12 social">
                 <ul>
                     <?php
-
-                    $social = templateController::ctrStyleTemplate();
-                    $json = json_decode($social['redesSociales'], true);
-                    foreach ($json as $key => $value) {
-
-                        echo '<li><a href="' . $value['url'] . '"><i class="fa ' . $value['red'] . ' redSocial ' . $value['estilo'] . ' "aria-hidden="true"></i></a></li>';
+                    $socialnetwork = json_decode($config['ctrTemplate']['redesSociales'], true);
+                    foreach ($socialnetwork as $key => $social) {
+                        echo '<li><a href="' . $social['url'] . '"><i class="fa ' . $social['red'] . ' redSocial ' . $social['estilo'] . ' "aria-hidden="true"></i></a></li>';
                     }
                     ?>
                 </ul>
@@ -22,9 +18,25 @@
             <!-- Login/Register -->
             <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 registro">
                 <ul>
+                    <li>
+
+                        <button id="searchButton" class="btn btn-default" data-toggle="modal"
+                                data-target="#searchModal">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </li>
+                    <li>|</li>
                     <li><a href="#modalIngreso" data-toggle="modal">Ingresar</a></li>
                     <li>|</li>
                     <li><a href="#modalRegistro" data-toggle="modal">Crear cuenta</a></li>
+                    <li>|</li>
+                    <li>
+                        <div class="pull-right" id="carrito">
+                            <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                            <span class="sumaCesta">USD $50.00 </span>
+                            <span class="cantidadCesta">1</span>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -39,19 +51,18 @@
 
             <!-- Logo -->
             <div class="col-lg-2 col-md-3 col-sm-2 col-xs-12" id="logotipo">
-
-                <a href="<?php echo $pathFrontEnd; ?>">
-                    <img src="http://localhost:8080/Udemy/carrito-compras-php/backend/views/img/template/<?php echo $social["logo"]; ?>"
+                <a href="<?= $config['frontend'] ?>">
+                    <img src="<?= $config['backend'] ?>views/img/template/<?= $config['ctrTemplate']["logo"] ?>"
                          alt="logo" class="img-responsive">
                 </a>
 
             </div>
 
             <!--Browser and categories -->
-            <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
+            <div class="col-xs-12">
 
                 <!-- categories button -->
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 backColor" id="btnCategorias">
+                <div class="col-xs-12" id="btnCategorias">
 
                     <p>
                         CATEGORIAS
@@ -60,47 +71,24 @@
                     </span>
                     </p>
                 </div>
-
-                <!-- Search form -->
-                <div class="input-group col-lg-8 col-md-8 col-sm-8 col-xs-12" id="buscador">
-
-                    <input type="search" name="buscar" class="form-control" placeholder="Buscar...">
-                    <span class="input-group-btn">
-                        <a href="#">
-                            <button class="btn btn-default backColor" type="submit">
-
-                                <i class="fa fa-search"></i>
-
-                            </button>
-                        </a>
-                    </span>
-                </div>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-2 col-xs-12" id="carrito">
 
-                <a href="#">
-                    <button class="btn btn-default pull-left backColor">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                    </button>
-                </a>
-                <p>TU CARRITO <span class="cantidadCesta"></span><br>USD $50.00 <span class="sumaCesta"></span></p>
-            </div>
         </div>
 
         <!--Categories -->
-        <div class="col-xs-12 backColor" id="categorias">
-            <?php $categories = productsController::requestCategories();
+        <div class="col-xs-12" id="categorias">
+            <?php
 
-            for ($i = 0; $i < count($categories); $i++) {
+            for ($i = 0; $i < count($config['categories']); $i++) {
 
-                echo '<div class="col-lg-2 col-md-3 col-sm-4 col-xs-12"><h4> <a href="' . $categories[$i]['ruta'] . '" class="pixelCategorias"> ' . $categories[$i]['categoria'] . '</a><hr><ul>';
+                echo '<div class="col-lg-2 col-md-3 col-sm-4 col-xs-12"><h4> <a href="' . $config['frontend'] . $config['categories'][$i]['ruta'] . '" class="pixelCategorias"> ' . $config['categories'][$i]['categoria'] . '</a><hr class="limiter"><ul>';
 
-                $value = $categories[$i]['id'];
+                $value = $config['categories'][$i]['id'];
                 $item = 'id_categoria';
 
-                $subCategories = productsController::requestSubCategories($item, $value);
+                $subCategories = productsController::ctrSubCategories($item, $value);
                 foreach ($subCategories as $key => $value) {
-                    echo '<li><a href="' . $value['ruta'] . '" class="pixelSubCategorias">' . $value['subcategoria'] . '</a></li>';
+                    echo '<li><a href="' . $config['frontend'] . $value['ruta'] . '" class="pixelSubCategorias">' . $value['subcategoria'] . '</a></li>';
 
                 }
                 echo '</ul></div>';

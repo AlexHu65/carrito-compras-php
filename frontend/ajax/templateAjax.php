@@ -8,7 +8,7 @@ class templateAjax
 {
     public function ajaxStyleTemplate(){
 
-        //use an static method to use template ctr style
+        //use an static method to use ctrTemplate ctr style
         $response = templateController::ctrStyleTemplate();
 
         echo json_encode($response, true);

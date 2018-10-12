@@ -1,4 +1,4 @@
-<ul style="display: none;" class="grid1">
+<ul class="grid1">
 
     <!--Producto 1-->
 

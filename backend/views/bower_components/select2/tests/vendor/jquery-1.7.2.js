@@ -7301,7 +7301,7 @@ jQuery.extend({
 			xml: "application/xml, text/xml",
 			html: "text/html",
 			text: "text/plain",
-			json: "application/json, text/javascript",
+			json: "application/socialnetwork, text/javascript",
 			"*": allTypes
 		},
 
@@ -7327,7 +7327,7 @@ jQuery.extend({
 			// Text to html (true = no transformation)
 			"text html": true,
 
-			// Evaluate text as a json expression
+			// Evaluate text as a socialnetwork expression
 			"text json": jQuery.parseJSON,
 
 			// Parse text as xml
@@ -7980,7 +7980,7 @@ jQuery.ajaxSetup({
 });
 
 // Detect, normalize options and install callbacks for jsonp requests
-jQuery.ajaxPrefilter( "json jsonp", function( s, originalSettings, jqXHR ) {
+jQuery.ajaxPrefilter( "socialnetwork jsonp", function( s, originalSettings, jqXHR ) {
 
 	var inspectData = ( typeof s.data === "string" ) && /^application\/x\-www\-form\-urlencoded/.test( s.contentType );
 
@@ -8027,7 +8027,7 @@ jQuery.ajaxPrefilter( "json jsonp", function( s, originalSettings, jqXHR ) {
 			}
 		});
 
-		// Use data converter to retrieve json after script execution
+		// Use data converter to retrieve socialnetwork after script execution
 		s.converters["script json"] = function() {
 			if ( !responseContainer ) {
 				jQuery.error( jsonpCallback + " was not called" );
@@ -8035,7 +8035,7 @@ jQuery.ajaxPrefilter( "json jsonp", function( s, originalSettings, jqXHR ) {
 			return responseContainer[ 0 ];
 		};
 
-		// force json dataType
+		// force socialnetwork dataType
 		s.dataTypes[ 0 ] = "json";
 
 		// Delegate to script

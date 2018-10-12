@@ -325,7 +325,7 @@ jQuery.extend( {
 			text: "text/plain",
 			html: "text/html",
 			xml: "application/xml, text/xml",
-			json: "application/json, text/javascript"
+			json: "application/socialnetwork, text/javascript"
 		},
 
 		contents: {
@@ -350,7 +350,7 @@ jQuery.extend( {
 			// Text to html (true = no transformation)
 			"text html": true,
 
-			// Evaluate text as a json expression
+			// Evaluate text as a socialnetwork expression
 			"text json": JSON.parse,
 
 			// Parse text as xml

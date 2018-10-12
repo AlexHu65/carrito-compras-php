@@ -209,6 +209,13 @@
 }
 
 #btnSlide {
+    width: 10%;
+    border: 0;
+    font-size: larger;
+
+}
+
+/*#btnSlide {
     width: 20%;
     height: 20px;
     border: 0px;
@@ -227,7 +234,7 @@
     -webkit-transition: .5s;
     -moz-transition: .5s;
 
-}
+}*/
 
 /*=============================================
 ESCRITORIO GRANDE (LG revisamos en 1366px en adelante)

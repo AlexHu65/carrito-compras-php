@@ -2493,7 +2493,7 @@ require.register("reporters/html-cov.js", function(module, exports, require){
  * Module dependencies.
  */
 
-var JSONCov = require('./json-cov')
+var JSONCov = require('./socialnetwork-cov')
   , fs = require('browser/fs');
 
 /**
@@ -2569,7 +2569,7 @@ var Date = global.Date
 exports = module.exports = HTML;
 
 /**
- * Stats template.
+ * Stats ctrTemplate.
  */
 
 var statsTemplate = '<ul id="mocha-stats">'
@@ -2825,7 +2825,7 @@ exports.Base = require('./base');
 exports.Dot = require('./dot');
 exports.Doc = require('./doc');
 exports.TAP = require('./tap');
-exports.JSON = require('./json');
+exports.JSON = require('./socialnetwork');
 exports.HTML = require('./html');
 exports.List = require('./list');
 exports.Min = require('./min');
@@ -2835,13 +2835,13 @@ exports.XUnit = require('./xunit');
 exports.Markdown = require('./markdown');
 exports.Progress = require('./progress');
 exports.Landing = require('./landing');
-exports.JSONCov = require('./json-cov');
+exports.JSONCov = require('./socialnetwork-cov');
 exports.HTMLCov = require('./html-cov');
-exports.JSONStream = require('./json-stream');
+exports.JSONStream = require('./socialnetwork-stream');
 
 }); // module: reporters/index.js
 
-require.register("reporters/json-cov.js", function(module, exports, require){
+require.register("reporters/socialnetwork-cov.js", function(module, exports, require){
 
 /**
  * Module dependencies.
@@ -2996,9 +2996,9 @@ function clean(test) {
   }
 }
 
-}); // module: reporters/json-cov.js
+}); // module: reporters/socialnetwork-cov.js
 
-require.register("reporters/json-stream.js", function(module, exports, require){
+require.register("reporters/socialnetwork-stream.js", function(module, exports, require){
 
 /**
  * Module dependencies.
@@ -3060,9 +3060,9 @@ function clean(test) {
     , duration: test.duration
   }
 }
-}); // module: reporters/json-stream.js
+}); // module: reporters/socialnetwork-stream.js
 
-require.register("reporters/json.js", function(module, exports, require){
+require.register("reporters/socialnetwork.js", function(module, exports, require){
 
 /**
  * Module dependencies.
@@ -3133,7 +3133,7 @@ function clean(test) {
     , duration: test.duration
   }
 }
-}); // module: reporters/json.js
+}); // module: reporters/socialnetwork.js
 
 require.register("reporters/landing.js", function(module, exports, require){
 

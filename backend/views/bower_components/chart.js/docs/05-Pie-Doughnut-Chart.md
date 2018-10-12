@@ -87,7 +87,7 @@ These are the customisation options specific to Pie & Doughnut charts. These opt
 	//Boolean - Whether we animate scaling the Doughnut from the centre
 	animateScale : false,
 	{% raw %}
-	//String - A legend template
+	ctrTemplate
 	legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>"
 	{% endraw %}
 }

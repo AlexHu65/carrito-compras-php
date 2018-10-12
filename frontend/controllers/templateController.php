@@ -4,7 +4,7 @@ class templateController
 {
 
     /**
-     * Return main template from the view dir
+     * Return main ctrTemplate from the view dir
      *
      */
 
@@ -26,5 +26,15 @@ class templateController
     }
 
     //ToDO: Include all paths in one config file
+
+
+    static public function ctrStyleBanner($item, $value)
+    {
+        $table = 'banner';
+        $response = templateModel::mdlStyleBanner($table, $item, $value);
+        return $response;
+
+
+    }
 
 }

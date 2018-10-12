@@ -1704,7 +1704,7 @@
         return [ content ].join("\n");
     }
     function toComment(sourceMap) {
-        return "/*# " + ("sourceMappingURL=data:application/json;charset=utf-8;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))))) + " */";
+        return "/*# " + ("sourceMappingURL=data:application/socialnetwork;charset=utf-8;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))))) + " */";
     }
     module.exports = function(useSourceMap) {
         var list = [];
@@ -1830,7 +1830,7 @@
     }
     function updateLink(link, options, obj) {
         var css = obj.css, sourceMap = obj.sourceMap, autoFixUrls = void 0 === options.convertToAbsoluteUrls && sourceMap;
-        (options.convertToAbsoluteUrls || autoFixUrls) && (css = fixUrls(css)), sourceMap && (css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */");
+        (options.convertToAbsoluteUrls || autoFixUrls) && (css = fixUrls(css)), sourceMap && (css += "\n/*# sourceMappingURL=data:application/socialnetwork;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */");
         var blob = new Blob([ css ], {
             type: "text/css"
         }), oldSrc = link.href;

@@ -1,4 +1,4 @@
-<ul class="list1">
+<ul style="display: none;" class="list1">
 
     <!-- Producto 1-->
     <li class="col-xs-12">

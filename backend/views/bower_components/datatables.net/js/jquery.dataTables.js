@@ -4090,7 +4090,7 @@
 	/**
 	 * Data the data from the server (nuking the old) and redraw the table
 	 *  @param {object} oSettings dataTables settings object
-	 *  @param {object} json json data return from the server.
+	 *  @param {object} json socialnetwork data return from the server.
 	 *  @param {string} json.sEcho Tracking flag for DataTables to match requests
 	 *  @param {int} json.iTotalRecords Number of records in the data set, not accounting for filtering
 	 *  @param {int} json.iTotalDisplayRecords Number of records in the data set, accounting for filtering
@@ -7599,7 +7599,7 @@
 	 *
 	 * @return {object} JSON received from the server.
 	 */
-	_api_register( 'ajax.json()', function () {
+	_api_register( 'ajax.socialnetwork()', function () {
 		var ctx = this.context;
 	
 		if ( ctx.length > 0 ) {
@@ -10092,7 +10092,7 @@
 		 *   // Get JSON data from a file via Ajax.
 		 *   // Note DataTables expects data in the form `{ data: [ ...data... ] }` by default).
 		 *   $('#example').dataTable( {
-		 *     "ajax": "data.json"
+		 *     "ajax": "data.socialnetwork"
 		 *   } );
 		 *
 		 * @example
@@ -10100,7 +10100,7 @@
 		 *   // `data` to `tableData` (i.e. `{ tableData: [ ...data... ] }`)
 		 *   $('#example').dataTable( {
 		 *     "ajax": {
-		 *       "url": "data.json",
+		 *       "url": "data.socialnetwork",
 		 *       "dataSrc": "tableData"
 		 *     }
 		 *   } );
@@ -10110,7 +10110,7 @@
 		 *   // from a plain array rather than an array in an object
 		 *   $('#example').dataTable( {
 		 *     "ajax": {
-		 *       "url": "data.json",
+		 *       "url": "data.socialnetwork",
 		 *       "dataSrc": ""
 		 *     }
 		 *   } );
@@ -10121,12 +10121,12 @@
 		 *   // is just a simple example of how the data can be manipulated).
 		 *   $('#example').dataTable( {
 		 *     "ajax": {
-		 *       "url": "data.json",
-		 *       "dataSrc": function ( json ) {
-		 *         for ( var i=0, ien=json.length ; i<ien ; i++ ) {
-		 *           json[i][0] = '<a href="/message/'+json[i][0]+'>View message</a>';
+		 *       "url": "data.socialnetwork",
+		 *       "dataSrc": function ( socialnetwork ) {
+		 *         for ( var i=0, ien=socialnetwork.length ; i<ien ; i++ ) {
+		 *           socialnetwork[i][0] = '<a href="/message/'+socialnetwork[i][0]+'>View message</a>';
 		 *         }
-		 *         return json;
+		 *         return socialnetwork;
 		 *       }
 		 *     }
 		 *   } );
@@ -10135,7 +10135,7 @@
 		 *   // Add data to the request
 		 *   $('#example').dataTable( {
 		 *     "ajax": {
-		 *       "url": "data.json",
+		 *       "url": "data.socialnetwork",
 		 *       "data": function ( d ) {
 		 *         return {
 		 *           "extra_search": $('#extra').val()
@@ -10148,7 +10148,7 @@
 		 *   // Send request as POST
 		 *   $('#example').dataTable( {
 		 *     "ajax": {
-		 *       "url": "data.json",
+		 *       "url": "data.socialnetwork",
 		 *       "type": "POST"
 		 *     }
 		 *   } );
@@ -10818,7 +10818,7 @@
 		 * since that is obtained using an async XHR call.
 		 *  @type function
 		 *  @param {object} settings DataTables settings object
-		 *  @param {object} json The JSON object request from the server - only
+		 *  @param {object} socialnetwork The JSON object request from the server - only
 		 *    present if client-side Ajax sourced data is used
 		 *
 		 *  @dtopt Callbacks
@@ -10827,7 +10827,7 @@
 		 *  @example
 		 *    $(document).ready( function() {
 		 *      $('#example').dataTable( {
-		 *        "initComplete": function(settings, json) {
+		 *        "initComplete": function(settings, socialnetwork) {
 		 *          alert( 'DataTables has finished its initialisation.' );
 		 *        }
 		 *      } );
@@ -10965,9 +10965,9 @@
 		 *        "stateLoadCallback": function (settings, callback) {
 		 *          $.ajax( {
 		 *            "url": "/state_load",
-		 *            "dataType": "json",
-		 *            "success": function (json) {
-		 *              callback( json );
+		 *            "dataType": "socialnetwork",
+		 *            "success": function (socialnetwork) {
+		 *              callback( socialnetwork );
 		 *            }
 		 *          } );
 		 *        }
@@ -11068,7 +11068,7 @@
 		 *          $.ajax( {
 		 *            "url": "/state_save",
 		 *            "data": data,
-		 *            "dataType": "json",
+		 *            "dataType": "socialnetwork",
 		 *            "method": "POST"
 		 *            "success": function () {}
 		 *          } );
@@ -13487,7 +13487,7 @@
 		 *   <ul>
 		 *     <li>function:fn - function to call. Takes two parameters, oSettings
 		 *       and the JSON string to save that has been thus far created. Returns
-		 *       a JSON string to be inserted into a json object
+		 *       a JSON string to be inserted into a socialnetwork object
 		 *       (i.e. '"param": [ 0, 1, 2]')</li>
 		 *     <li>string:sName - name of callback</li>
 		 *   </ul>
@@ -15236,19 +15236,19 @@
 	 *  @event
 	 *  @param {event} e jQuery event object
 	 *  @param {object} o DataTables settings object {@link DataTable.models.oSettings}
-	 *  @param {object} json JSON returned from the server
+	 *  @param {object} socialnetwork JSON returned from the server
 	 *
 	 *  @example
 	 *     // Use a custom property returned from the server in another DOM element
-	 *     $('#table').dataTable().on('xhr.dt', function (e, settings, json) {
-	 *       $('#status').html( json.status );
+	 *     $('#table').dataTable().on('xhr.dt', function (e, settings, socialnetwork) {
+	 *       $('#status').html( socialnetwork.status );
 	 *     } );
 	 *
 	 *  @example
 	 *     // Pre-process the data returned from the server
-	 *     $('#table').dataTable().on('xhr.dt', function (e, settings, json) {
-	 *       for ( var i=0, ien=json.aaData.length ; i<ien ; i++ ) {
-	 *         json.aaData[i].sum = json.aaData[i].one + json.aaData[i].two;
+	 *     $('#table').dataTable().on('xhr.dt', function (e, settings, socialnetwork) {
+	 *       for ( var i=0, ien=socialnetwork.aaData.length ; i<ien ; i++ ) {
+	 *         socialnetwork.aaData[i].sum = socialnetwork.aaData[i].one + socialnetwork.aaData[i].two;
 	 *       }
 	 *       // Note no return - manipulate the data directly in the JSON object.
 	 *     } );

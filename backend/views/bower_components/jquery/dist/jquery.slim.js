@@ -123,7 +123,7 @@ function toType( obj ) {
 		typeof obj;
 }
 /* global Symbol */
-// Defining this global in .eslintrc.json would create a danger of using the global
+// Defining this global in .eslintrc.socialnetwork would create a danger of using the global
 // unguarded in another place, it seems safer to define global only for this module
 
 
@@ -3151,7 +3151,7 @@ jQuery.each( {
         }
 
         // Support: IE 9 - 11 only, iOS 7 only, Android Browser <=4.3 only
-        // Treat the template element as a regular one in browsers that
+        // Treat the ctrTemplate element as a regular one in browsers that
         // don't support it.
         if ( nodeName( elem, "template" ) ) {
             elem = elem.content || elem;

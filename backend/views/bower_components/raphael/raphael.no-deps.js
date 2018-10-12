@@ -5303,7 +5303,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     **
 	     > Parameters
 	     **
-	     - json (array)
+	     - socialnetwork (array)
 	     = (object) resulting set of imported elements
 	     > Usage
 	     | paper.add([

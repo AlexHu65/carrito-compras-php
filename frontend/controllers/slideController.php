@@ -7,7 +7,7 @@ class slideController
      * @return array
      */
 
-    public static function ctrShowSlide()
+    public static function ctrGetSlide()
     {
         $table = 'slide';
         $response = slideModel::sqlShowSlide($table);

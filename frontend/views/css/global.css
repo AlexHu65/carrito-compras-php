@@ -9,10 +9,16 @@ GLOBAL
     text-decoration: none;
     font-family: 'Ubuntu', sans-serif;
 }
+/*
+body {
+    margin-top: 50px;
+}*/
 
 ul, ol {
     padding: 0px;
 }
+
+
 
 a:visited, a:link, a:focus, a:hover, a:active {
     list-style: none;
@@ -127,13 +133,33 @@ ERROR 404
     color: #333;
 }
 
-
-#scrollUp{
+#scrollUp {
     bottom: 20px;
     right: 20px;
     width: 50px;
     height: 50px;
+    border-radius: 25px;
     background: url(../img/template/flecha.jpg);
+}
+
+.fondoBreadCrumb {
+    margin-bottom: 0px;
+    background: rgba(0, 0, 0, 0);
+/ / text-transform: uppercase;
+}
+
+/*=============================================
+CARRITO
+=============================================*/
+
+.registro ul li #carrito .cantidadCesta {
+    padding: 4px 7px 4px 7px;
+    background: white;
+    border-radius: 20px;
+    color: #0a0a0a;
+    margin: 10px;
+    width: 100%;
+    font-weight: bolder;
 }
 
 /*=============================================
@@ -193,6 +219,14 @@ MOVIL (XS revisamos en 320px)
 
 @media (max-width: 767px) {
 
+    #slide {
+        display: none;
+    }
+
+    #btnSlide {
+        display: none;
+    }
+
     .col-xs-0 {
         display: none;
     }
@@ -203,3 +237,5 @@ MOVIL (XS revisamos en 320px)
     }
 
 }
+
+

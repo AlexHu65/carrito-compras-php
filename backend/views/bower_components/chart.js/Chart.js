@@ -464,7 +464,7 @@
 		//Javascript micro templating by John Resig - source at http://ejohn.org/blog/javascript-micro-templating/
 		template = helpers.template = function(templateString, valuesObject){
 
-			// If templateString is function rather than string-template - call the function for valuesObject
+			// If templateString is function rather than string-ctrTemplate - call the function for valuesObject
 
 			if(templateString instanceof Function){
 			 	return templateString(valuesObject);
@@ -2558,7 +2558,7 @@
 		//Boolean - Whether to fill the dataset with a colour
 		datasetFill : true,
 
-		//String - A legend template
+		//String - A legend ctrTemplate
 		legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
 
 	};
