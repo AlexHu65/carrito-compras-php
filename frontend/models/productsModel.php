@@ -60,9 +60,15 @@ class productsModel
 
     }
 
+
     /**
-     * Products from the database
      * @param $table
+     * @param $order
+     * @param string $item
+     * @param $value
+     * @param $base
+     * @param $top
+     * @param $mode
      * @return array
      */
 
@@ -118,6 +124,13 @@ class productsModel
 
 
     }
+
+    /**
+     * @param $table
+     * @param $item
+     * @param $value
+     * @return mixed
+     */
 
     static public function sqlProductInfo($table, $item, $value)
     {
@@ -209,6 +222,24 @@ class productsModel
 
         $stmt = null;
 
+    }
+
+    /**
+     * @param $table
+     * @return array
+     */
+
+    static public function sqlListModules($table){
+
+        $stmt  = connection::connect()->prepare("SELECT * FROM $table");
+
+        $stmt->execute();
+
+        return $stmt->fetchAll();
+
+        $stmt->close();
+
+        $stmt = null;
     }
 
 }

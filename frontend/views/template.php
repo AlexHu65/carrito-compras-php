@@ -89,7 +89,6 @@ magnam nam nisi numquam odit quaerat, repellat, rerum sint sunt ullam, voluptate
     include 'modules/header.php';
 
 
-
     $paths = [];
     $path = null;
 
@@ -166,26 +165,31 @@ magnam nam nisi numquam odit quaerat, repellat, rerum sint sunt ullam, voluptate
             include 'modules/buscador.php';
 
 
-
         } else {
 
             include "modules/404.php";
         }
 
     } else {
-
-       // include "modules/slide.php";
-
+        // include "modules/slide.php";
         include "modules/destacados.php";
-
-        include 'modules/footer.php';
-
-
     }
 
 
     ?>
 
+    <!-- footer -->
+    <div  style="margin: 0; padding: 0;" class="container-fluid">
+        <div class="col-xs-12">
+
+            <div class="row">
+                <?php include 'modules/footer.php';?>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- end footer -->
 
 </div>
 

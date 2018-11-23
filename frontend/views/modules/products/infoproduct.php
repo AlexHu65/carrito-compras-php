@@ -6,7 +6,6 @@ $value = $paths[0];
 $infoProduct = productsController::ctrProductInfo($item, $value);
 
 ?>
-
 <!-- breadcrumbs -->
 <div class="container-fluid productos">
     <div class="container">
@@ -21,17 +20,18 @@ $infoProduct = productsController::ctrProductInfo($item, $value);
             </ul>
             <!-- share social networks -->
             <hr>
-
         </div>
 
     </div>
 </div>
+
 <!-- end breadcrumbs -->
 
 <div class="container-fluid infoproducto">
     <div class="container">
         <!-- Info products -->
         <div class="row">
+
 
             <!-- thumbnail  -->
             <?php
@@ -61,108 +61,19 @@ $infoProduct = productsController::ctrProductInfo($item, $value);
 
                 echo '<div id="product-details" class="col-sm-6 col-xs-12">';
 
-
             } ?>
 
 
-            <div class="clearfix"></div>
-
-            <!-- product details-->
-
-            <h1 class="text-muted text-uppercase">
-
-                <?php
-
-                //Title product
-                echo $infoProduct['titulo'];
-                echo ' <hr>';
-
-                //Offer product
-                if (isset($infoProduct['oferta']) && $infoProduct['oferta'] == 1) { ?>
-
-                    <small>
-                        <span class="label label-warning"><?= $infoProduct['descuentoOferta'] ?>% OFF</span>
-                    </small>
-
-                <?php }
-
-                //New product
-                if (isset($infoProduct['oferta']) && $infoProduct['nuevo'] == 1) { ?>
-
-                    <small>
-                        <span class="label label-warning">NUEVO</span>
-                    </small>
-
-                <?php } ?>
-
-
-            </h1>
-
-            <?php
-            if (isset($infoProduct['precio']) && $infoProduct['precio'] == 0) {
-
-                echo '<h3 class="text-muted"><b class="label label-success">GRATIS</b></h3><br>';
-
-            } else {
-
-                if (isset($infoProduct['precio']) && $infoProduct['oferta'] == 0) {
-
-                    echo '<h3 class="text-muted"><b class="text-muted" style="color: #00b5cc;">USD</b> $' . $infoProduct['precio'] . '</h3>';
-
-                } else {
-
-                    echo '<h3 class="text-muted">
-                             <span>
-                                  <strong class="oferta"><b class="text-muted">USD</b> $' . $infoProduct['precio'] . '</strong>
-                             </span>
-                             
-                              <span>
-                                  <strong><b class="text-muted" style="color: #00b5cc;">USD</b> $' . $infoProduct['precioOferta'] . '</strong>
-                             </span>
-                          </h3>';
-                }
-            }
-
-            //description
-
-            echo '<p>' . $infoProduct['descripcion'] . '</p>' ?>
-
-            <hr>
-
-            <div class="form-group row">
-
-                <?php if (!empty($infoProduct['detalles']) != null) {
-
-                    $details = json_decode($infoProduct['detalles'], true);
-                    include 'details/details.php';
-                }
-                ?>
-            </div>
-            <!-- delivery  -->
-
-            <?php
-            echo '<h4>
-                           <hr>
-                               <span class="label label-primary" style="font-weight: 100">
-                               <i class="fa fa-clock-o"></i>';
-            echo ($infoProduct['entrega'] == 0) ? '  Entrega inmediata' : ' ' . $infoProduct['entrega'] . ' d&iacute;as para entrega';
-            echo '</span>                             
-                             <span class="label label-primary" style="font-weight: 100; margin-left: 15px;">
-                               <i class="fa fa-shopping-cart"></i> ' . $infoProduct['ventas'] . '
-                                                            </span> 
-                             <span class="label label-primary" style="font-weight: 100; margin-left: 15px;">
-                               <i class="fa fa-eye"></i> ' . $infoProduct['vistas'] . '
-                                                            </span>
-                            </h4>';
-            ?>
-
-            <hr>
-
             <div class="col-xs-6 pull-left">
                 <h6>
-                    <a class="text-muted" href="javascript:history.back()">
+                    <a class="text-muted pull-left" href="javascript:history.back()">
                         <i class="fa fa-shopping-cart"></i> Seguir comprando
                     </a>
+                </h6>
+            </div>
+            <div class="col-xs-6 pull-right">
+                <h6>
+
                     <a class="dropdown-toggle text-muted pull-right" data-toggle="dropdown" href="#">
                         <i class="fa fa-share"></i> Compartir
                     </a>
@@ -184,12 +95,96 @@ $infoProduct = productsController::ctrProductInfo($item, $value);
                     </ul>
                 </h6>
             </div>
+            <div class="clearfix"></div>
 
+
+            <!-- product details-->
+
+            <h1 class="text-muted text-uppercase">
+                <?php
+
+                //Title product
+                echo $infoProduct['titulo'];
+                echo '<hr>';
+
+                //Offer product
+                if (isset($infoProduct['oferta']) && $infoProduct['oferta'] == 1) {
+
+                    echo '<small>';
+                    echo '<span class="label label-warning"><' . $infoProduct['descuentoOferta'] . '% OFF</span>';
+                    echo '</small>';
+                }
+
+                //New product
+                if (isset($infoProduct['oferta']) && $infoProduct['nuevo'] == 1) {
+                    echo ' <small>';
+                    echo '<span class="label label-warning" > NUEVO</span >';
+                    echo '</small >';
+
+                } ?>
+            </h1>
+
+            <?php
+            if (isset($infoProduct['precio']) && $infoProduct['precio'] == 0) {
+
+                echo '<h3 class="text-muted"><b class="label label-success">GRATIS</b></h3><br>';
+
+            } else {
+
+                if (isset($infoProduct['precio']) && $infoProduct['oferta'] == 0) {
+
+                    echo '<h3 class="text-muted"><b class="text-muted">USD</b> $' . $infoProduct['precio'] . '</h3>';
+
+                } else {
+
+                    echo '<h3 class="text-muted">';
+                    echo '<span>';
+                    echo '<strong class="oferta"><b class="text-muted">USD</b> $' . $infoProduct['precio'] . '</strong>';
+                    echo '</span>';
+
+                    echo '<span>';
+                    echo '<strong><b class="text-muted" >USD</b> $' . $infoProduct['precioOferta'] . '</strong>';
+                    echo '</span>';
+                    echo '</h3>';
+                }
+            }
+
+            //description
+
+            echo '<p>' . $infoProduct['descripcion'] . '</p>' ?>
+
+            <hr>
+
+            <div class="form-group row">
+
+                <?php if (!empty($infoProduct['detalles']) != null) {
+
+                    $details = json_decode($infoProduct['detalles'], true);
+                    include 'details/details.php';
+                }
+                ?>
+            </div>
+            <!-- delivery  -->
+
+            <?php
+
+            echo '<h4>';
+            echo '<hr>';
+            echo '<span class="label label-default" style="font-weight: 100">';
+            echo '<i class="fa fa-clock-o"></i>';
+            echo ($infoProduct['entrega'] == 0) ? '  Entrega inmediata' : ' ' . $infoProduct['entrega'] . ' d&iacute;as para entrega';
+            echo '</span>';
+            echo '<span class="label label-default" style="font-weight: 100; margin-left: 15px;">';
+            echo '<i class="fa fa-shopping-cart"></i> ' . $infoProduct['ventas'] . '</span>';
+            echo '<span class="label label-default" style="font-weight: 100; margin-left: 15px;">';
+            echo '<i class="fa fa-eye"></i> ' . $infoProduct['vistas'] . '</span>';
+            echo '</h4>';
+
+            ?>
+
+            <hr>
             <!-- shop -->
-
             <div class="row text-center">
-
-
             </div>
 
             <!-- lens -->
@@ -199,7 +194,4 @@ $infoProduct = productsController::ctrProductInfo($item, $value);
             </figure>
         </div>
     </div>
-</div>
-</div>
-
 </div>

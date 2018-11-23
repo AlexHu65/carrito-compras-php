@@ -46,10 +46,10 @@ class productsController
      * @return array
      */
 
-    static public function ctrProducts($order, $item, $value, $base, $top , $mode)
+    static public function ctrProducts($order, $item, $value, $base, $top, $mode)
     {
         $table = 'productos';
-        $response = productsModel::sqlProducts($table, $order, $item, $value, $base, $top ,$mode);
+        $response = productsModel::sqlProducts($table, $order, $item, $value, $base, $top, $mode);
         return $response;
     }
 
@@ -104,7 +104,17 @@ class productsController
 
     }
 
-    static public function ctrSearchProducts($search, $order, $mode, $base, $top){
+    /**
+     * @param $search
+     * @param $order
+     * @param $mode
+     * @param $base
+     * @param $top
+     * @return array
+     */
+
+    static public function ctrSearchProducts($search, $order, $mode, $base, $top)
+    {
 
         $table = "productos";
 
@@ -114,11 +124,31 @@ class productsController
 
     }
 
-    static public function ctrListarProductosBusqueda($busqueda){
+    /**
+     * @param $busqueda
+     * @return array
+     */
+
+    static public function ctrListarProductosBusqueda($busqueda)
+    {
 
         $table = "productos";
 
         $response = productsModel::sqlListProductSearch($table, $busqueda);
+
+        return $response;
+
+    }
+
+    /**
+     * Obtain all list modules
+     */
+
+    static public function ctrListModules()
+    {
+        $table = "modules";
+
+        $response = productsModel::sqlListModules($table);
 
         return $response;
 
