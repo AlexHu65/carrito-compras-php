@@ -69,6 +69,24 @@ class productsController
 
 
     }
+
+    /**
+     * Info product depends id product
+     * @param $item
+     * @param $value
+     * @return array
+     */
+
+
+    static public function ctrProductInfo($item, $value)
+    {
+        $table = 'productos';
+        $response = productsModel::sqlProductInfo($table, $item, $value);
+        return $response;
+
+
+    }
+
     /**
      *Return a list of products
      * @param $order

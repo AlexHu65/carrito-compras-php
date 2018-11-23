@@ -1,7 +1,7 @@
 <!-- Top header -->
 <div class="container-fluid barraSuperior" id="top">
 
-    <div class="container-container">
+    <div class="container-fluid">
         <div class="row">
 
             <!-- Social network icons -->

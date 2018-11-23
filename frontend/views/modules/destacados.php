@@ -363,7 +363,7 @@ $modulesInfo = [$freeProducts, $selledProducts, $viewProducts];
                                                         title="Agregar a mi lista de deseos">
 
                                                     <i class="fa fa-heart" aria-hidden="true"></i>
-
+kk
                                                 </button>
 
                                                 <a href="<?= $value["ruta"]; ?>" class="pixelProducto">

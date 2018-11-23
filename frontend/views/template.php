@@ -88,10 +88,13 @@ magnam nam nisi numquam odit quaerat, repellat, rerum sint sunt ullam, voluptate
 
     include 'modules/header.php';
 
+
+
     $paths = [];
     $path = null;
 
     if (isset($_GET['path'])) {
+
 
         $paths = explode('/', $_GET['path']);
 
@@ -162,6 +165,8 @@ magnam nam nisi numquam odit quaerat, repellat, rerum sint sunt ullam, voluptate
 
             include 'modules/buscador.php';
 
+
+
         } else {
 
             include "modules/404.php";
@@ -169,9 +174,11 @@ magnam nam nisi numquam odit quaerat, repellat, rerum sint sunt ullam, voluptate
 
     } else {
 
-        include "modules/slide.php";
+       // include "modules/slide.php";
 
         include "modules/destacados.php";
+
+        include 'modules/footer.php';
 
 
     }
@@ -182,7 +189,11 @@ magnam nam nisi numquam odit quaerat, repellat, rerum sint sunt ullam, voluptate
 
 </div>
 
-<?php include 'modules/modals/search.php'; ?>
+<?php
+
+include 'modules/modals/search.php';
+
+?>
 
 <input id="pathFrontEnd" type="hidden" value="<?= $config['frontend'] ?>">
 

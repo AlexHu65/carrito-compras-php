@@ -1,7 +1,6 @@
 <?php
 
 include 'products/banner.php';
-
 ?>
 
 <div class="container-fluid barraProductos">
@@ -204,7 +203,7 @@ include 'products/banner.php';
                                     </a>
 
                                 </small>
-                                <?php //echo 'ID' . $value['id']; ?>
+                                <?php echo 'ID' . $value['id']; ?>
 
                             </h4>
 
@@ -438,6 +437,7 @@ include 'products/banner.php';
                 <div class="clearfix"></div>
 
                 <center>
+
                     <?php if (count($listProducts) != 0) {
 
                         include 'pagination.php';
