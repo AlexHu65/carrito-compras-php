@@ -9,16 +9,14 @@ GLOBAL
     text-decoration: none;
     font-family: 'Ubuntu', sans-serif;
 }
-/*
-body {
+
+/*body {
     margin-top: 50px;
 }*/
 
 ul, ol {
     padding: 0px;
 }
-
-
 
 a:visited, a:link, a:focus, a:hover, a:active {
     list-style: none;
@@ -160,6 +158,34 @@ CARRITO
     margin: 10px;
     width: 100%;
     font-weight: bolder;
+}
+
+/*=============================================
+FOOTER
+=============================================*/
+
+.bottom {
+    background-image: url("../../../backend/views/img/banner/newsletter.png");
+    background-color: #2e3131;
+    background-position: center;
+    background-size: cover;
+    color: whitesmoke;
+}
+
+.bottom a:link, a:visited {
+    color: inherit;
+}
+
+.bottom .pay-cc li {
+    display: inline;
+}
+
+.bottom .footer-section {
+    padding: 25px;
+}
+
+.bottom .copyright {
+    padding: 5px;
 }
 
 /*=============================================

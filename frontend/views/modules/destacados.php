@@ -23,10 +23,6 @@ $modules = productsController::ctrListModules();
  * Free module - all free products
  */
 
-echo '<pre>';
-print_r($modules);
-echo '</pre>';
-
 
 if ($modules[0]['shortname'] == 'free') {
 

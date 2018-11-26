@@ -178,26 +178,25 @@ magnam nam nisi numquam odit quaerat, repellat, rerum sint sunt ullam, voluptate
 
     ?>
 
-    <!-- footer -->
-    <div  style="margin: 0; padding: 0;" class="container-fluid">
-        <div class="col-xs-12">
-
-            <div class="row">
-                <?php include 'modules/footer.php';?>
-
-            </div>
-
-        </div>
-    </div>
-    <!-- end footer -->
-
 </div>
 
+
+<div  style="margin: 0; padding: 0;" class="container-fluid">
+    <div class="col-xs-12">
+
+        <div class="row">
+            <?php include 'modules/footer.php';?>
+
+        </div>
+
+    </div>
+</div>
+<!-- end footer -->
+
 <?php
-
 include 'modules/modals/search.php';
-
 ?>
+
 
 <input id="pathFrontEnd" type="hidden" value="<?= $config['frontend'] ?>">
 

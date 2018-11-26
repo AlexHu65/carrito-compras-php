@@ -21,8 +21,8 @@
                     <li>
 
                         <button id="searchButton" class="btn btn-default" data-toggle="modal"
-                                data-target="#searchModal">
-                            <i class="fa fa-search"></i>
+                        data-target="#searchModal">
+                        <i class="fa fa-search"></i>
                         </button>
                     </li>
                     <li>|</li>

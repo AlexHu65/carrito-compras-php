@@ -111,12 +111,13 @@ $infoProduct = productsController::ctrProductInfo($item, $value);
                 if (isset($infoProduct['oferta']) && $infoProduct['oferta'] == 1) {
 
                     echo '<small>';
-                    echo '<span class="label label-warning"><' . $infoProduct['descuentoOferta'] . '% OFF</span>';
+                    echo '<span class="label label-warning">' . $infoProduct['descuentoOferta'] . '% OFF</span>';
                     echo '</small>';
                 }
 
                 //New product
                 if (isset($infoProduct['oferta']) && $infoProduct['nuevo'] == 1) {
+
                     echo ' <small>';
                     echo '<span class="label label-warning" > NUEVO</span >';
                     echo '</small >';
@@ -181,17 +182,28 @@ $infoProduct = productsController::ctrProductInfo($item, $value);
             echo '</h4>';
 
             ?>
-
             <hr>
+
             <!-- shop -->
             <div class="row text-center">
+
             </div>
 
             <!-- lens -->
             <figure class="lupa">
-
                 <img src="" alt="">
             </figure>
+
         </div>
+
+
+
+    </div>
+    <hr style="border: 0;">
+
+    <!-- similar products -->
+    <div id="similar-products">
+
+
     </div>
 </div>
