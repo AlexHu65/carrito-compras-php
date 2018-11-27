@@ -176,7 +176,12 @@ FOOTER
     color: inherit;
 }
 
+.bottom li {
+    padding: 5px;
+}
+
 .bottom .pay-cc li {
+
     display: inline;
 }
 

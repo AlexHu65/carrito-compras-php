@@ -1,7 +1,6 @@
 <?php
 
 session_start();
-
 $config = [
     'backend' => routing::selectRouteBackEnd(),
     'frontend' => routing::selectRouteFrontEnd(),
@@ -9,7 +8,6 @@ $config = [
     'categories' => productsController::ctrCategories(),
     'slide' => slideController::ctrGetSlide()
 ];
-
 ?>
 <!doctype html>
 <html lang="en">
@@ -194,7 +192,9 @@ magnam nam nisi numquam odit quaerat, repellat, rerum sint sunt ullam, voluptate
 <!-- end footer -->
 
 <?php
+
 include 'modules/modals/search.php';
+
 ?>
 
 

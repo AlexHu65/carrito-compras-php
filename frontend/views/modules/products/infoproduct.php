@@ -5,6 +5,19 @@ $item = "ruta";
 $value = $paths[0];
 $infoProduct = productsController::ctrProductInfo($item, $value);
 
+
+//Similar products
+$search = explode('-', $paths[0]);
+$order = 'id';
+$mode = 'ASC';
+
+$base = rand(1 , 4);
+$top = ($base  * 2);
+
+$id = $infoProduct['id'];
+
+$similarProducts = productsController::ctrSimilarProducts($search, $order, $mode, $base, $top, $id , $infoProduct['id_categoria']);
+
 ?>
 <!-- breadcrumbs -->
 <div class="container-fluid productos">
@@ -105,6 +118,7 @@ $infoProduct = productsController::ctrProductInfo($item, $value);
 
                 //Title product
                 echo $infoProduct['titulo'];
+                //echo $infoProduct['id'];
                 echo '<hr>';
 
                 //Offer product
@@ -197,13 +211,21 @@ $infoProduct = productsController::ctrProductInfo($item, $value);
         </div>
 
 
-
     </div>
-    <hr style="border: 0;">
+    <div class="row">
+        <hr style="border: 0;">
 
-    <!-- similar products -->
-    <div id="similar-products">
+        <!-- similar products -->
+        <div id="similar-products">
+            <h3>Te podr&iacute;a interesar:</h3>
+            <hr>
+            <?php
 
+            include 'similar.php';
 
+            ?>
+
+        </div>
     </div>
+
 </div>

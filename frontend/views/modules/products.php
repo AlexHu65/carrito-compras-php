@@ -203,7 +203,7 @@ include 'products/banner.php';
                                     </a>
 
                                 </small>
-                                <?php echo 'ID' . $value['id']; ?>
+                                <?php // echo 'ID' . $value['id']; ?>
 
                             </h4>
 

@@ -125,6 +125,28 @@ class productsController
     }
 
     /**
+     * @param $search
+     * @param $order
+     * @param $mode
+     * @param $base
+     * @param $top
+     * @return array
+     */
+
+
+
+    static public function ctrSimilarProducts($search, $order, $mode, $base, $top ,$id, $category)
+    {
+
+        $table = "productos";
+
+        $response = productsModel::sqlSearchSimilarProducts($table, $search, $order, $mode, $base, $top ,$id, $category);
+
+        return $response;
+
+    }
+
+    /**
      * @param $busqueda
      * @return array
      */
