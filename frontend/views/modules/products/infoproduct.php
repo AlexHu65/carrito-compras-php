@@ -6,17 +6,27 @@ $value = $paths[0];
 $infoProduct = productsController::ctrProductInfo($item, $value);
 
 
+//Get sub category
+$itemSub = 'id';
+$valueSub = $infoProduct['id_subcategoria'];
+$subcategoriesPath = productsController::ctrSubCategories($itemSub, $valueSub);
+
 //Similar products
-$search = explode('-', $paths[0]);
-$order = 'id';
+
+$order = 'RAND()';
+$item = 'id_subcategoria';
+$value = $infoProduct['id_subcategoria'];
+$base = 0;
+$top = 4;
 $mode = 'ASC';
 
-$base = rand(1 , 4);
-$top = ($base  * 2);
+$similarProducts = productsController::ctrProducts($order, $item, $value, $base, $top, $mode);
 
-$id = $infoProduct['id'];
+//Get multimedia string
 
-$similarProducts = productsController::ctrSimilarProducts($search, $order, $mode, $base, $top, $id , $infoProduct['id_categoria']);
+$multimedia = json_decode($infoProduct['multimedia'], true);
+
+//Count views product
 
 ?>
 <!-- breadcrumbs -->
@@ -198,11 +208,54 @@ $similarProducts = productsController::ctrSimilarProducts($search, $order, $mode
             ?>
             <hr>
 
-            <!-- shop -->
-            <div class="row text-center">
+            <!-- buttons shop -->
+            <div class="row">
+
+                <?php if ($infoProduct['precio'] == 0) {
+
+                    if ($infoProduct['tipo'] == 'virtual') {
+                        echo '<div class="col-md-6 col-xs-12">
+                    <button class="btn btn-default btn-block btn-lg">Acceder ahora</button>
+                    
+                </div>';
+                    } else {
+
+                        echo '<div class="col-md-6 col-xs-12">
+                    <button class="btn btn-default btn-block btn-lg"><i class="fa fa-shopping-cart"></i>
+                    Solicitar ahora</button>                   
+
+                    
+                </div>';
+
+                    }
+
+                } else {
+
+                    if ($infoProduct['tipo'] == 'virtual') {
+
+                        echo '<div class="col-md-6 col-xs-12">
+                    <button class="btn btn-default btn-block btn-lg">Comprar ahora</button>
+                </div>
+                
+                <div class="col-md-6">
+                    <button class="btn btn-default btn-block btn-lg"><i class="fa fa-shopping-cart"></i>
+                        Agregar al carrito
+                    </button>
+                </div>';
+                    } else {
+
+                        echo '<div class="col-md-6 col-xs-12">
+                    <button class="btn btn-default btn-block btn-lg"><i class="fa fa-shopping-cart"></i>
+                        Agregar al carrito
+                    </button>
+                </div>';
+                    }
+
+
+                } ?>
+
 
             </div>
-
             <!-- lens -->
             <figure class="lupa">
                 <img src="" alt="">
@@ -210,22 +263,176 @@ $similarProducts = productsController::ctrSimilarProducts($search, $order, $mode
 
         </div>
 
-
     </div>
+    <!--comments -->
+    <br>
+    <br>
+    <div class="row">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="">Comentarios</a></li>
+            <li><a href="">Ver M&aacute;s</a></li>
+            <li class="pull-right"><a href="#" class="text-muted">Promedio de calificaci&oacute;n : 3.5
+                    <i class="fa fa-star text-success"></i>
+                    <i class="fa fa-star text-success"></i>
+                    <i class="fa fa-star text-success"></i>
+                    <i class="fa fa-star-half-o text-success"></i>
+                    <i class="fa fa-star-o text-success"></i>
+                </a>
+            </li>
+        </ul>
+        <br>
+        <div class="row comments">
+
+            <div class="panel-group col-md-3 col-sm-6 col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading text-uppercase">
+                        <span class="text-right"><img class="img-circle"
+                                                      src="<?= $config['frontend'] . 'views/img/users/40/944.jpg' ?>"
+                                                      width="20%" alt="profile-picture"></span>
+                        <b class="text-muted">Manuel Alejandro</b>
+                    </div>
+                    <div class="panel-body">
+                        <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto eligendi facilis,
+                            magni nihil omnis quisquam quod rerum totam! Autem fuga hic nesciunt nulla odio odit
+                            officiis quidem rem suscipit veniam?
+                        </small>
+                    </div>
+                    <div class="panel-footer">
+                        <i class="fa fa-star text-success"></i>
+                        <i class="fa fa-star text-success"></i>
+                        <i class="fa fa-star text-success"></i>
+                        <i class="fa fa-star-half-o text-success"></i>
+                        <i class="fa fa-star-o text-success"></i>
+                    </div>
+                </div>
+
+            </div>
+            <div class="panel-group col-md-3 col-sm-6 col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading text-uppercase">
+                        <span class="text-right"><img class="img-circle"
+                                                      src="<?= $config['frontend'] . 'views/img/users/40/944.jpg' ?>"
+                                                      width="20%" alt="profile-picture"></span>
+                        <b class="text-muted">Manuel Alejandro</b>
+                    </div>
+                    <div class="panel-body">
+                        <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto eligendi facilis,
+                            magni nihil omnis quisquam quod rerum totam! Autem fuga hic nesciunt nulla odio odit
+                            officiis quidem rem suscipit veniam?
+                        </small>
+                    </div>
+                    <div class="panel-footer">
+                        <i class="fa fa-star text-success"></i>
+                        <i class="fa fa-star text-success"></i>
+                        <i class="fa fa-star text-success"></i>
+                        <i class="fa fa-star-half-o text-success"></i>
+                        <i class="fa fa-star-o text-success"></i>
+                    </div>
+                </div>
+
+            </div>
+            <div class="panel-group col-md-3 col-sm-6 col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading text-uppercase">
+                        <span class="text-right"><img class="img-circle"
+                                                      src="<?= $config['frontend'] . 'views/img/users/40/944.jpg' ?>"
+                                                      width="20%" alt="profile-picture"></span>
+                        <b class="text-muted">Manuel Alejandro</b>
+                    </div>
+                    <div class="panel-body">
+                        <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto eligendi facilis,
+                            magni nihil omnis quisquam quod rerum totam! Autem fuga hic nesciunt nulla odio odit
+                            officiis quidem rem suscipit veniam?
+                        </small>
+                    </div>
+                    <div class="panel-footer">
+                        <i class="fa fa-star text-success"></i>
+                        <i class="fa fa-star text-success"></i>
+                        <i class="fa fa-star text-success"></i>
+                        <i class="fa fa-star-half-o text-success"></i>
+                        <i class="fa fa-star-o text-success"></i>
+                    </div>
+                </div>
+
+            </div>
+            <div class="panel-group col-md-3 col-sm-6 col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading text-uppercase">
+                        <span class="text-right"><img class="img-circle"
+                                                      src="<?= $config['frontend'] . 'views/img/users/40/944.jpg' ?>"
+                                                      width="20%" alt="profile-picture"></span>
+                        <b class="text-muted">Manuel Alejandro</b>
+                    </div>
+                    <div class="panel-body">
+                        <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto eligendi facilis,
+                            magni nihil omnis quisquam quod rerum totam! Autem fuga hic nesciunt nulla odio odit
+                            officiis quidem rem suscipit veniam?
+                        </small>
+                    </div>
+                    <div class="panel-footer">
+                        <i class="fa fa-star text-success"></i>
+                        <i class="fa fa-star text-success"></i>
+                        <i class="fa fa-star text-success"></i>
+                        <i class="fa fa-star-half-o text-success"></i>
+                        <i class="fa fa-star-o text-success"></i>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- end comments -->
     <div class="row">
         <hr style="border: 0;">
 
         <!-- similar products -->
         <div id="similar-products">
-            <h3>Te podr&iacute;a interesar:</h3>
-            <hr>
+            <div class="row">
+                <div class="col-xs-12 tituloDestacado">
+                    <!----Title module----->
+                    <div class="col-sm-6 col-xs-12">
+                        <h1>
+                            <small>Te podr&iacute;a interesar</small>
+                        </h1>
+                    </div>
+                    <!----End title module----->
+
+                    <!-- Buttons group -->
+                    <div class="col-sm-6 col-xs-12">
+                        <a href="<?= $config['frontend'] . $subcategoriesPath[0]['ruta'] ?>">
+                            <button class="btn btn-default pull-right" data-toggle="tooltip"
+                                    title="Ver m&aacute;s">
+                                <span class="fa fa-search-plus"></span>
+                            </button>
+                        </a>
+                    </div>
+                    <!--End buttons group -->
+                    <div class="clearfix"></div>
+                    <hr>
+                </div>
+                <!-- titulo destacado-->
+            </div>
             <?php
 
-            include 'similar.php';
+            if (empty($similarProducts) || !($similarProducts)) {
+                echo '<div class="col-xs-12 error404">';
+
+                echo '<h1><small>Oops! </small></h1> ';
+                echo '<h2>No hay productos relacionados</h2> ';
+
+                echo '</div>';
+            } else {
+
+                include 'similar.php';
+
+            }
+
 
             ?>
 
         </div>
+
     </div>
 
 </div>

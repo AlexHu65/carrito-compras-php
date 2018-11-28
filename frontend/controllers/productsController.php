@@ -97,7 +97,6 @@ class productsController
 
     static public function ctrListProducts($order, $item, $value)
     {
-
         $table = 'productos';
         $response = productsModel::sqlListProducts($order, $item, $value, $table);
         return $response;
@@ -119,28 +118,6 @@ class productsController
         $table = "productos";
 
         $response = productsModel::sqlSearchProducts($table, $search, $order, $mode, $base, $top);
-
-        return $response;
-
-    }
-
-    /**
-     * @param $search
-     * @param $order
-     * @param $mode
-     * @param $base
-     * @param $top
-     * @return array
-     */
-
-
-
-    static public function ctrSimilarProducts($search, $order, $mode, $base, $top ,$id, $category)
-    {
-
-        $table = "productos";
-
-        $response = productsModel::sqlSearchSimilarProducts($table, $search, $order, $mode, $base, $top ,$id, $category);
 
         return $response;
 

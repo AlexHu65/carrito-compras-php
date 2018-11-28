@@ -69,3 +69,6 @@ $(".infoproducto figure.visor img").mousemove(function(event){
     })
 
 });
+
+//View count
+

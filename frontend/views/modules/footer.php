@@ -10,7 +10,7 @@
                     <li><i class="fa fa-cc-paypal"></i></li>
                     <li></li>
                     <li><img src="<?= $config['backend'] ?>views/img/template/<?= $config['ctrTemplate']["logo"] ?>"
-                             alt="logo" style="width: 50%" class="img-responsive"></li>
+                             alt="logo" style="opacity: .5;" class="img-responsive logo-footer"></li>
                 </ul>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-4 footer-section ">
@@ -37,12 +37,14 @@
                     <li>8:00 - 20:00 hrs</li>
                 </ul>
             </div>
+
+
             <div style="padding: 15px;" class="col-xs-12 copyright">
                 <center>
                     <form action="#">
-                        <label for="news">Suscribete para recibir las &uacute;ltimas noticias.</label>
-                        <input name="news" style="width: 30%; border-radius: 0; border: none;" class="form-control" type="email" placeholder="newsletter">
-                        <input type="submit" style="width: 30%; border-radius: 0; border: none; margin-top: 5px; background-color: #1b1e21; color: whitesmoke;" class="form-control" value="Suscribirse!">
+                        <label class="label-newsletter" for="news">Suscribete para recibir las &uacute;ltimas noticias.</label>
+                        <input name="news" style="border-radius: 0; border: none;" class="form-control input-newsletter" type="email" placeholder="newsletter">
+                        <input type="submit" style="border-radius: 0; border: none; margin-top: 5px; background-color: #1b1e21; color: whitesmoke;" class="form-control input-newsletter" value="Suscribirse!">
                     </form>
                     <hr>
                     &copy; Copyright 2018 Tu tienda.com

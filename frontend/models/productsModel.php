@@ -206,38 +206,6 @@ class productsModel
     /**
      * @param $table
      * @param $search
-     * @param $order
-     * @param $mode
-     * @param $base
-     * @param $top
-     * @return array
-     */
-
-
-    static public function sqlSearchSimilarProducts($table, $search, $order, $mode, $base, $top, $id, $category)
-    {
-        $stmt = connection::connect()->prepare("SELECT * FROM $table WHERE id != :id AND id_categoria  = :category ORDER BY $order $mode LIMIT $base , $top");
-        //$stmt = connection::connect()->prepare("SELECT * FROM $table WHERE id != :id AND id_categoria  = :category OR titulo LIKE :search1 ORDER BY $order $mode LIMIT $base , $top");
-        //$stmt = connection::connect()->prepare("SELECT * FROM $table WHERE id != :id AND titulo LIKE :search1 AND id_categoria  = :category OR titulo LIKE :search2 ORDER BY $order $mode LIMIT $base , $top");
-
-        // $search[0] = '%' . $search[0] . '%';
-
-        $stmt->bindParam(":id", $id);
-        //$stmt->bindParam(":search1", $search[0], PDO::PARAM_STR);
-        $stmt->bindParam(":category", $category);
-
-
-        $stmt->execute();
-        return $stmt->fetchAll();
-        $stmt->close();
-
-        $stmt = null;
-
-    }
-
-    /**
-     * @param $table
-     * @param $search
      * @return array
      */
 
