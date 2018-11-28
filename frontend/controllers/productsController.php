@@ -153,5 +153,19 @@ class productsController
 
     }
 
+    /**
+     * @param $data
+     * @return array
+     */
+    static public function ctrProductsViews($data)
+    {
+        $table = "productos";
+
+        $response = productsModel::sqlUpdateProducts($table, $data);
+
+        return $response;
+
+    }
+
 
 }

@@ -202,7 +202,14 @@ $multimedia = json_decode($infoProduct['multimedia'], true);
             echo '<span class="label label-default" style="font-weight: 100; margin-left: 15px;">';
             echo '<i class="fa fa-shopping-cart"></i> ' . $infoProduct['ventas'] . '</span>';
             echo '<span class="label label-default" style="font-weight: 100; margin-left: 15px;">';
-            echo '<i class="fa fa-eye"></i> ' . $infoProduct['vistas'] . '</span>';
+            if (isset($infoProduct['precio']) && $infoProduct['precio'] == 0) {
+
+                echo '<i class="fa fa-eye"></i> <span class="views" product-id="' . $infoProduct['id'] . '" price="free"> ' . $infoProduct['vistasGratis'] . '</span></span>';
+
+            } else {
+                echo '<i class="fa fa-eye"></i> <span class="views" product-id="' . $infoProduct['id'] . '" price="normal"> ' . $infoProduct['vistas'] . '</span></span>';
+
+            }
             echo '</h4>';
 
             ?>

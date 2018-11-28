@@ -243,4 +243,39 @@ class productsModel
         $stmt = null;
     }
 
+    /**
+     * @param $table
+     * @param $data
+     * @return array
+     */
+
+
+    static public function sqlUpdateProducts($table, $data)
+    {
+
+        $item = $data['item'];
+        $value = $data['value'];
+
+
+        $stmt = connection::connect()->prepare("UPDATE $table SET $item = :$item WHERE id  = :id");
+
+        $stmt->bindParam(":" . $item, $value, PDO::PARAM_STR);
+        $stmt->bindParam(":id", $data['id'], PDO::PARAM_STR);
+
+
+        if ($stmt->execute()) {
+
+            return 'ok';
+
+        } else {
+
+            return 'error';
+        }
+
+        $stmt->close();
+        $stmt = null;
+
+
+    }
+
 }
