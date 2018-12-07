@@ -1,13 +1,10 @@
-
 /*Slide content*/
 #slide {
-    font-family: 'Ubuntu Condensed', sans-serif;
     position: relative;
-    margin: auto;
     width: 100%;
     overflow: hidden;
     padding: 0;
-    margin-top: 15px;
+    margin-top: 0;
 }
 
 #slide ul {
@@ -34,8 +31,13 @@
 
 /*Slide configuration*/
 
+#slide .textosSlide {
+    background: rgba(0, 0, 0, .05);
+    padding: 15px;
+}
+
 #slide .slideOpciones button {
-    border: 0px;
+    border: 0;
     margin-top: 10px;
     padding: 10px;
     opacity: 1;
@@ -44,35 +46,41 @@
 }
 
 #slide .slideOpciones h1 {
+    font-size: 40px;
     text-transform: uppercase;
-    font-size: 50px;
-    font-family: 'Ubuntu Condensed', sans-serif;
+    font-family: 'Oswald', sans-serif;
     opacity: 1;
     top: -10%;
-    /* color: #333;*/
+    line-height: 1;
+
 }
 
 #slide .slideOpciones h2 {
-    text-transform: uppercase;
-    font-size: 35px;
-    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 25px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
     opacity: 1;
     top: -10%;
-    /* color: #777;*/
+    line-height: .5;
 
 }
 
 #slide .slideOpciones h3 {
-    text-transform: uppercase;
-    font-size: 30px;
-    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
     opacity: 1;
     top: -10%;
-    /*color: #888;*/
+    line-height: .5;
+
+}
+
+#slide .slideOpciones button{
+    border-radius: 80px;
+    margin: 15px auto;
 }
 
 #slide .slideOpciones button span {
-
     margin-left: 10px;
 }
 
@@ -80,7 +88,7 @@
 
     background: black;
     color: white;
-    border: 0px;
+    border: 0;
 }
 
 #slide .slideOpcion1 img {
@@ -94,26 +102,19 @@
 #slide .slideOpcion1 .textosSlide {
 
     position: absolute;
-    font-family: 'Ubuntu Condensed', sans-serif;
-    /*  width: 40%;
-      top: 20%;
-      left: 10%;*/
+
 }
 
 #slide .slideOpcion2 img {
     position: absolute;
     opacity: 1;
-    /* top: 5%;
-     left: 15%;
-     width: 25%;*/
+
 }
 
 #slide .slideOpcion2 .textosSlide {
     position: absolute;
     text-align: right;
-    /*width: 40%;
-    top: 15%;
-    right: 15%;*/
+
 
 }
 
@@ -123,37 +124,47 @@
 
     position: absolute;
     font-size: 2em;
-    color: white;
+    /*  color: white;*/
     cursor: pointer;
     z-index: 2;
 }
 
+#slide #retroceder, #slide #avanzar {
+    background: #eeeeee;
+}
+
 #slide #retroceder {
-    background: #666;
+
     padding: 40px 15px 40px 10px;
     top: 37%;
     left: 0;
     font-size: 22px;
     opacity: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
 }
 
 #slide #avanzar {
-    background: #666;
-    padding: 40px 15px 40px 10px;
+
+    padding: 40px 10px 40px 15px;
     top: 37%;
     right: 0;
     font-size: 22px;
     opacity: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
 
 }
 
 #slide #retroceder:hover, #slide #avanzar:hover {
-    background: #777;
+    /* background: #777;*/
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 
 }
 
 #slide #retroceder:active, #slide #avanzar:active {
-    background: #444;
+    background: #d2d7d3;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 
 }
 
@@ -187,7 +198,6 @@
 }
 
 #slide .controls {
-
     position: absolute;
     font-size: 2em;
     color: white;
@@ -208,33 +218,33 @@
     color: #777;
 }
 
-#btnSlide {
-    width: 10%;
-    border: 0;
-    font-size: larger;
-
+#slide:hover, #btnSlide {
+    opacity: 1;
 }
 
-/*#btnSlide {
-    width: 20%;
-    height: 20px;
-    border: 0px;
+#btnSlide {
+    background: none;
+    width: 10%;
+    height: 50px;
+    border: 0;
     opacity: 0;
-    font-size: 25px;
+    font-size: xx-large;
     padding: 2px;
     transition: .5s;
     -webkit-transition: .5s;
     -moz-transition: .5s;
+    cursor: pointer;
+
 }
 
 #btnSlide:hover {
-    height: 50px;
     opacity: 1;
     transition: .5s;
     -webkit-transition: .5s;
     -moz-transition: .5s;
+    background: none;
 
-}*/
+}
 
 /*=============================================
 ESCRITORIO GRANDE (LG revisamos en 1366px en adelante)
@@ -265,7 +275,7 @@ ESCRITORIO MEDIANO O TABLET HORIZONTAL (MD revisamos en 1024px)
     }
 
     #slide .slideOpciones button {
-        margin-top: -10px;
+        margin-top: 10px;
         padding: 5px;
     }
 
@@ -298,7 +308,7 @@ ESCRITORIO PEQUEÑO O TABLET VERTICAL (SM revisamos en 768px)
     }
 
     #slide .slideOpciones button {
-        margin-top: -10px;
+        margin-top: 4px;
         padding: 5px;
     }
 
@@ -311,6 +321,10 @@ ESCRITORIO PEQUEÑO O TABLET VERTICAL (SM revisamos en 768px)
         height: 50px;
         opacity: 1;
 
+    }
+
+    #slide .textosSlide {
+        height: 150px;
     }
 
 }
@@ -342,7 +356,7 @@ MOVIL (XS revisamos en 320px)
 
     #slide .slideOpciones button {
 
-        margin: 25px;
+        margin-top: 25px;
         padding: 5px 5px;
         font-size: 10px;
     }
@@ -356,12 +370,9 @@ MOVIL (XS revisamos en 320px)
         width: 100%;
         height: 50px;
         opacity: 1;
-      /* transition: .5s;
-        -webkit-transition: .5s;
-        -moz-transition: .5s;*/
+        display: none;
 
     }
-
 }
 
 

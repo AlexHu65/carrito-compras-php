@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+
 $config = [
     'backend' => routing::selectRouteBackEnd(),
     'frontend' => routing::selectRouteFrontEnd(),
@@ -11,6 +12,7 @@ $config = [
 ?>
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -27,6 +29,16 @@ magnam nam nisi numquam odit quaerat, repellat, rerum sint sunt ullam, voluptate
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+
 
     <title> Tienda | Online</title>
 
@@ -46,20 +58,27 @@ magnam nam nisi numquam odit quaerat, repellat, rerum sint sunt ullam, voluptate
 
     <link rel="stylesheet" href="<?= $config['frontend'] ?>views/css/global.css">
 
-
-    <link rel="stylesheet" href="<?= $config['frontend'] ?>views/css/productos.css">
-
     <!-- css header -->
 
     <link rel="stylesheet" href="<?= $config['frontend'] ?>views/css/header.css">
 
-    <!-- css flex slider -->
+    <!-- css products -->
 
-    <link rel="stylesheet" href="<?= $config['frontend'] ?>views/css/plugins/flexslider.css">
+    <link rel="stylesheet" href="<?= $config['frontend'] ?>views/css/productos.css">
 
     <!-- css info product -->
 
     <link rel="stylesheet" href="<?= $config['frontend'] ?>views/css/infoproduct.css">
+
+
+    <!-- css footer product -->
+
+    <link rel="stylesheet" href="<?= $config['frontend'] ?>views/css/footer.css">
+
+
+    <!-- css flex slider -->
+
+    <link rel="stylesheet" href="<?= $config['frontend'] ?>views/css/plugins/flexslider.css">
 
 
     <!-- slide css -->
@@ -91,7 +110,6 @@ magnam nam nisi numquam odit quaerat, repellat, rerum sint sunt ullam, voluptate
     $path = null;
 
     if (isset($_GET['path'])) {
-
 
         $paths = explode('/', $_GET['path']);
 
@@ -169,7 +187,8 @@ magnam nam nisi numquam odit quaerat, repellat, rerum sint sunt ullam, voluptate
         }
 
     } else {
-        // include "modules/slide.php";
+
+        include "modules/slide.php";
         include "modules/destacados.php";
     }
 
@@ -179,11 +198,11 @@ magnam nam nisi numquam odit quaerat, repellat, rerum sint sunt ullam, voluptate
 </div>
 
 
-<div  style="margin: 0; padding: 0;" class="container-fluid">
+<div style="margin: 0; padding: 0;" class="container-fluid">
     <div class="col-xs-12">
 
         <div class="row">
-            <?php include 'modules/footer.php';?>
+            <?php include 'modules/footer.php'; ?>
 
         </div>
 
@@ -194,9 +213,20 @@ magnam nam nisi numquam odit quaerat, repellat, rerum sint sunt ullam, voluptate
 <?php
 
 include 'modules/modals/search.php';
+include 'modules/modals/menu.php';
 
 ?>
 
+
+<div id="searchFloat" class="btn btn-default" data-toggle="modal"
+        data-target="#searchModal">
+    <i class="fa fa-search"></i>
+</div>
+
+<div id="menuFloat" class="btn btn-default" data-toggle="modal"
+     data-target="#menuModal">
+    <i class="fa fa-bars"></i>
+</div>
 
 <input id="pathFrontEnd" type="hidden" value="<?= $config['frontend'] ?>">
 

@@ -23,30 +23,3 @@
         </div>
     </div>
 </div>
-
-
-<!-- Search form product array
-<div class="modal fade" id="searchModalProd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <!--<div class="modal-header">
-                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                     <span aria-hidden="true">&times;</span>
-                 </button>
-             </div>
-            <div class="modal-body">
-                <div class="input-group col-xs-12" id="buscador">
-                    <input type="search" name="buscar" class="form-control" placeholder="Buscar...">
-                    <span class="input-group-btn">
-                        <a href="#">
-                            <button class="btn btn-default" type="submit">
-                                <i class="fa fa-search"></i>
-                            </button>
-                        </a>
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>-->

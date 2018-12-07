@@ -100,14 +100,14 @@ $("#play").click(function () {
 function stopSlide() {
 
     if (play) {
-        $(controls).removeClass("fa fa-pause-circle");
-        $(controls).addClass("fa fa-play-circle");
+        $(controls).removeClass("fa fa-pause-circle-o");
+        $(controls).addClass("fa fa-play-circle-o");
 
         play = false;
     } else {
 
-        $(controls).removeClass("fa fa-play-circle");
-        $(controls).addClass("fa fa-pause-circle");
+        $(controls).removeClass("fa fa-play-circle-o");
+        $(controls).addClass("fa fa-pause-circle-o");
 
 
         play = true;

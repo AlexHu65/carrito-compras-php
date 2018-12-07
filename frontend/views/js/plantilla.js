@@ -78,18 +78,19 @@ $(window).scroll(function () {
 
             if (scrollY < ($(".banner").offset().top) - 150) {
 
+                $(".banner img").css({"margin-top": -scrollY / 3 + "px"});
+                $("#searchFloat").css({"opacity": 0});
+                $("#menuFloat").css({"opacity": 0});
 
-                $(".banner img").css({"margin-top": -scrollY / 3 + "px"})
 
             } else {
 
-
+                $("#menuFloat").css({"opacity": 1});
+                $("#searchFloat").css({"opacity": 1});
                 scrollY = 0;
             }
 
         }
-
-
 
         $.scrollUp({
 
@@ -98,6 +99,7 @@ $(window).scroll(function () {
             easingType: "easeOutQuint"
 
         });
+
     }
 
 

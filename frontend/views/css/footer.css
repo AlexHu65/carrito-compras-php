@@ -1,0 +1,69 @@
+/*=============================================
+FOOTER
+=============================================*/
+
+.bottom {
+    background-image: url("../../../backend/views/img/banner/newsletter.png");
+    background-color: #2e3131;
+    background-position: center;
+    background-size: cover;
+    color: whitesmoke;
+
+}
+
+.bottom a:link, a:visited {
+    color: inherit;
+
+}
+
+.bottom li {
+    padding: 2px;
+}
+
+.bottom .pay-cc li {
+
+    display: inline;
+}
+
+.bottom .footer-section {
+    padding: 25px;
+    font-family: 'Montserrat', sans-serif
+}
+
+.bottom .footer-section ul li {
+    font-family: 'Montserrat', sans-serif
+
+}
+
+.bottom .footer-section ul li a {
+    line-height: .5;
+    font-family: 'Montserrat', sans-serif
+
+}
+
+.bottom .copyright {
+    padding: 5px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.bottom .copyright ul li {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.bottom .copyright ul li input {
+    width: 100%;
+    border-radius: 80px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.bottom .copyright ul li input[type=submit] {
+    background-color: #1b1e21;
+    color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
+
+}

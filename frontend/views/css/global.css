@@ -10,9 +10,11 @@ GLOBAL
     font-family: 'Ubuntu', sans-serif;
 }
 
-/*body {
-    margin-top: 50px;
-}*/
+body {
+    /* background-image: url("../../../backend/views/img/template/pattern/whitey.png");
+     background-repeat: repeat;*/
+
+}
 
 ul, ol {
     padding: 0px;
@@ -23,21 +25,8 @@ a:visited, a:link, a:focus, a:hover, a:active {
     text-decoration: none;
 }
 
-.barraSuperior {
-    background: black;
-}
-
-.barraSuperior a {
-    color: white;
-}
-
-.backColor, .backColor a {
-    background: #47bac1;
-    color: white;
-}
-
 /*=============================================
-REDES SOCIALES
+SOCIAL NETWORK
 =============================================*/
 
 .redSocial {
@@ -131,23 +120,14 @@ ERROR 404
     color: #333;
 }
 
-#scrollUp {
-    bottom: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
-    background: url(../img/template/flecha.jpg);
-}
-
 .fondoBreadCrumb {
     margin-bottom: 0px;
     background: rgba(0, 0, 0, 0);
-/ / text-transform: uppercase;
+    /*text-transform: uppercase;*/
 }
 
 /*=============================================
-CARRITO
+SHOPPING CART INDEX
 =============================================*/
 
 .registro ul li #carrito .cantidadCesta {
@@ -161,36 +141,57 @@ CARRITO
 }
 
 /*=============================================
-FOOTER
+SCROLL ARROW
 =============================================*/
 
-.bottom {
-    background-image: url("../../../backend/views/img/banner/newsletter.png");
+#menuFloat {
+    bottom: 132px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    position: fixed;
+    cursor: pointer;
     background-color: #2e3131;
-    background-position: center;
-    background-size: cover;
-    color: whitesmoke;
+    color: white;
+    border: none;
+    transition: .3s;
+    opacity: 0;
 }
 
-.bottom a:link, a:visited {
-    color: inherit;
+#searchFloat i {
+
+    margin-top: 10px;
 }
 
-.bottom li {
-    padding: 5px;
+#searchFloat {
+    bottom: 75px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    position: fixed;
+    cursor: pointer;
+    background-color: #2e3131;
+    color: white;
+    border: none;
+    transition: .3s;
+    opacity: 0;
 }
 
-.bottom .pay-cc li {
-
-    display: inline;
+#menuFloat i {
+    margin-top: 10px;
 }
 
-.bottom .footer-section {
-    padding: 25px;
-}
-
-.bottom .copyright {
-    padding: 5px;
+#scrollUp {
+    background-color: #2e3131;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    content: 'si';
+    background: url(../img/template/flecha.jpg);
 }
 
 /*=============================================
@@ -251,10 +252,6 @@ MOVIL (XS revisamos en 320px)
 @media (max-width: 767px) {
 
     #slide {
-        display: none;
-    }
-
-    #btnSlide {
         display: none;
     }
 

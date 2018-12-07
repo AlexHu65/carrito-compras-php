@@ -27,14 +27,27 @@ TOP
 .registro ul {
     text-align: right;
     font-size: 12px;
+
+}
+
+.registro ul li a {
+    font-family: 'Montserrat', sans-serif;
 }
 
 /*=============================================
 HEADER
 =============================================*/
 
+header {
+    background-image: url("../../../backend/views/img/slide/default/back_default.jpg");
+    background-position: center;
+}
+
 header #btnCategorias {
     margin: 20px 0;
+    width: 100%;
+    background-color: #e8ecf1;
+    border-radius: 25px;
 }
 
 header #btnCategorias p {
@@ -105,23 +118,39 @@ header #categorias hr {
 header #categorias li {
     font-size: small;
     font-weight: lighter;
-    padding: 3px;
-}
-
-header #btnCategorias {
-    width: 100%;
-    background-color: #e8ecf1;
-    border-radius: 25px;
+    padding: 0;
 }
 
 header .limiter {
     background-color: #81cfe0;
 }
 
+#head {
+    margin: 60px;
+}
+
+#header #logo {
+    margin-top: 25px;
+}
+
 .registro #searchButton {
     border: 0;
     background-color: transparent;
     color: inherit;
+    font-family: 'Montserrat', sans-serif
+}
+
+.barraSuperior {
+    font-family: 'Montserrat', sans-serif
+}
+
+.barraSuperior a {
+    color: #2e3131;
+}
+
+.backColor, .backColor a {
+    background: #47bac1;
+    color: white;
 }
 
 /*=============================================
@@ -142,6 +171,7 @@ body.modal-open .supreme-container {
     border-radius: 0;
     padding: 10px;
     position: relative;
+
 }
 
 .modal-header h4 {
@@ -162,6 +192,37 @@ body.modal-open .supreme-container {
     background-color: #dcdcdc;
     color: darkslategray;
     border-radius: 30px;
+}
+
+/*=============================================
+EDITAR MENU MODAL
+=============================================*/
+
+#menu-modal-content {
+    width: 800px;
+    border: 0;
+    border-radius: 0;
+    height: 530px;
+    padding: 10px;
+    position: relative;
+}
+
+#menu-modal-body {
+    width: 800px;
+    height: 500px;
+}
+
+#menu-modal-body div {
+    padding: 0;
+    margin: 12px;
+}
+#menu-modal-body #menu-content {
+    width: 94%;
+}
+
+#menu-modal-body h4 {
+
+    font-size: small;
 }
 
 /*=============================================
@@ -228,6 +289,10 @@ ESCRITORIO PEQUEÑO O TABLET VERTICAL (SM revisamos en 768px)
         display: none;
     }
 
+    #head {
+        margin: 0;
+    }
+
 }
 
 /*=============================================
@@ -265,6 +330,10 @@ MOVIL (XS revisamos en 320px)
 
     header #carrito {
         margin: 0px;
+    }
+
+    #head {
+        margin: 0;
     }
 
 }

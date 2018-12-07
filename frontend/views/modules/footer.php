@@ -37,20 +37,26 @@
                     <li>8:00 - 20:00 hrs</li>
                 </ul>
             </div>
-
-
             <div style="padding: 15px;" class="col-xs-12 copyright">
                 <center>
                     <form action="#">
-                        <label class="label-newsletter" for="news">Suscribete para recibir las &uacute;ltimas noticias.</label>
-                        <input name="news" style="border-radius: 0; border: none;" class="form-control input-newsletter" type="email" placeholder="newsletter">
-                        <input type="submit" style="border-radius: 0; border: none; margin-top: 5px; background-color: #1b1e21; color: whitesmoke;" class="form-control input-newsletter" value="Suscribirse!">
+                        <label style="font-weight: lighter;" class="label-newsletter" for="news">Suscribete para recibir
+                            las &uacute;ltimas noticias.</label>
+                        <ul style="list-style: none;">
+                            <li>
+                                <input name="news" class="form-control input-newsletter" type="email"
+                                       placeholder="newsletter">
+                            </li>
+                            <li>
+                                <input type="submit" class="form-control input-newsletter" value="Suscribirse!">
+                            </li>
+                        </ul>
                     </form>
                     <hr>
                     &copy; Copyright 2018 Tu tienda.com
                 </center>
             </div>
         </div>
-    </div>
+
 </footer>
 </div>

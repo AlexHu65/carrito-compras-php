@@ -1,4 +1,6 @@
+
 <div class="container-fluid" id="slide">
+
     <div class="row">
         <ul>
             <!-- SLIDE -->
@@ -53,15 +55,9 @@
         </ol>
 
         <!-- Arrows -->
-        <div class="controls" id="play"><span class="fa fa-pause-circle"></span></div>
-        <div class="flechas" id="retroceder"><span class="fa fa-chevron-left"></span></div>
-        <div class="flechas" id="avanzar"><span class="fa fa-chevron-right"></span></div>
+        <div class="controls" id="play"><span class="fa fa-pause-circle-o"></span></div>
+        <div style="color: <?=$config['ctrTemplate']['colorFondo']?>;" class="flechas" id="retroceder"><span class="fa fa-chevron-left"></span></div>
+        <div style="color: <?=$config['ctrTemplate']['colorFondo']?>;" class="flechas" id="avanzar"><span class="fa fa-chevron-right"></span></div>
 
     </div>
 </div>
-
-<center>
-
-    <button id="btnSlide"><i class="fa fa-angle-up"></i></button>
-
-</center>
