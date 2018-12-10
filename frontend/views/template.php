@@ -44,7 +44,7 @@ magnam nam nisi numquam odit quaerat, repellat, rerum sint sunt ullam, voluptate
 
 
     <link rel="icon"
-          href="http://localhost:8080/Udemy/carrito-compras-php/backend/views/img/template/<?= $config['ctrTemplate']['icono']; ?>">
+          href="<?=$config['frontend'] ?>views/img/template/<?= $config['ctrTemplate']['icono']; ?>">
 
     <!-- css bootstrap min -->
     <link rel="stylesheet" href="<?= $config['frontend'] ?>views/css/plugins/bootstrap.min.css">
