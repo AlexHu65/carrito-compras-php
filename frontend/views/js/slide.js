@@ -153,6 +153,7 @@ $('#slide').mousemove(function () {
     });
 
 
+
 });
 
 
@@ -166,12 +167,15 @@ $('#slide').mouseout(function () {
         "-webkit-transition": ".5s",
         "-moz-transition": ".5s"
     });
+
     $("#slide #avanzar").css({
         "opacity": 0,
         "transition": ".5s",
         "-webkit-transition": ".5s",
         "-moz-transition": ".5s"
     });
+
+
 
 
 });

@@ -39,12 +39,11 @@ magnam nam nisi numquam odit quaerat, repellat, rerum sint sunt ullam, voluptate
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 
 
-
     <title> Tienda | Online</title>
 
 
     <link rel="icon"
-          href="<?=$config['frontend'] ?>views/img/template/<?= $config['ctrTemplate']['icono']; ?>">
+          href="<?= $config['frontend'] ?>views/img/template/<?= $config['ctrTemplate']['icono']; ?>">
 
     <!-- css bootstrap min -->
     <link rel="stylesheet" href="<?= $config['frontend'] ?>views/css/plugins/bootstrap.min.css">
@@ -80,6 +79,10 @@ magnam nam nisi numquam odit quaerat, repellat, rerum sint sunt ullam, voluptate
 
     <link rel="stylesheet" href="<?= $config['frontend'] ?>views/css/plugins/flexslider.css">
 
+    <!-- css sweet alert -->
+
+    <link rel="stylesheet" href="<?= $config['frontend'] ?>views/css/plugins/sweetalert.css">
+
 
     <!-- slide css -->
 
@@ -93,8 +96,13 @@ magnam nam nisi numquam odit quaerat, repellat, rerum sint sunt ullam, voluptate
 
     <script src="<?= $config['frontend'] ?>views/js/plugins/bootstrap.min.js"></script>
 
+    <!-- Flexible slider -->
 
     <script src="<?= $config['frontend'] ?>views/js/plugins/jquery.flexslider.js"></script>
+
+    <!-- Sweet alert -->
+    <script src="<?= $config['frontend'] ?>views/js/plugins/sweetalert.min.js"></script>
+
 
 </head>
 <body>
@@ -176,9 +184,9 @@ magnam nam nisi numquam odit quaerat, repellat, rerum sint sunt ullam, voluptate
 
             include 'modules/products/infoproduct.php';
 
-        } else if ($paths[0] == 'buscador') {
+        } else if ($paths[0] == 'buscador' || $paths[0] == 'verificar') {
 
-            include 'modules/buscador.php';
+            include 'modules/' . $paths[0] . '.php';
 
 
         } else {
@@ -214,12 +222,14 @@ magnam nam nisi numquam odit quaerat, repellat, rerum sint sunt ullam, voluptate
 
 include 'modules/modals/search.php';
 include 'modules/modals/menu.php';
+include 'modules/modals/login.php';
+include 'modules/modals/register.php';
 
 ?>
 
 
 <div id="searchFloat" class="btn btn-default" data-toggle="modal"
-        data-target="#searchModal">
+     data-target="#searchModal">
     <i class="fa fa-search"></i>
 </div>
 
@@ -245,6 +255,8 @@ include 'modules/modals/menu.php';
 <script src="<?= $config['frontend'] ?>views/js/plugins/jquery.flexslider.js"></script>
 
 <script src="<?= $config['frontend'] ?>views/js/search.js"></script>
+
+<script src="<?= $config['frontend'] ?>views/js/users.js"></script>
 
 
 </body>
