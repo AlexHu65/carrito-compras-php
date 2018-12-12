@@ -101,11 +101,13 @@ $(window).scroll(function () {
 
     }
     
-    console.log('scroll' , scrollPosition);
+    /*console.log('scroll' , scrollPosition);*/
 
     if (scrollPosition !== 0) {
+
         $("#searchFloat").css({"opacity": 1});
         $("#menuFloat").css({"opacity": 1});
+
 
 
     } else {

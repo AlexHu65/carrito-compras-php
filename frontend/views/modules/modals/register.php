@@ -20,14 +20,14 @@ $register->ctrRegisterUser();
             <div class="modal-body">
                 <!-- facebook register -->
 
-                <div class="col-sm-6 col-xs-12 facebook " id="btnFacebookRegister">
+                <div class="col-sm-6 col-xs-12 facebook">
                     <p>
                         <i class="fa fa-facebook"></i>
                         Usando Facebook
                     </p>
                 </div>
                 <!-- google register -->
-                <div class="col-sm-6 col-xs-12 google " id="btnFacebookRegister">
+                <div class="col-sm-6 col-xs-12 google ">
                     <p>
                         <i class="fa fa-google"></i>
                         Usando Google

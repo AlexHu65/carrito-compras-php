@@ -22,7 +22,8 @@ if ($value == $response["emailEncriptado"]) {
 
     $response2 = usersController::ctrUpdateUsers($id, $item2, $valor2);
 
-    if (($response2) && $response2 !== null) {
+    if ($response2 == 'ok' && $response2 !== null) {
+
         $usuarioVerificado = true;
     }
 
