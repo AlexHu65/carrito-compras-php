@@ -1,3 +1,54 @@
+<?php
+
+/*Google api */
+$client = new Google_Client();
+$client->setAuthConfig('models/client.json');
+$client->setAccessType('offline');
+$client->setScopes(['profile', 'email']);
+/*Only for local*/
+$client->setHttpClient(new GuzzleHttp\Client(['verify' => false]));
+
+
+/*Login google*/
+
+$pathGoogle = $client->createAuthUrl();
+
+
+/*Get code google*/
+
+if (isset($_GET['code'])) {
+
+    $token = $client->authenticate($_GET['code']);
+
+    $_SESSION['id_token_google'] = $token;
+
+    $client->setAccessToken($token);
+
+
+}
+
+/*Crypt data google*/
+
+if ($client->getAccessToken()) {
+
+    $item = $client->verifyIdToken();
+    $data = [
+        'name' => $item['name'],
+        'password' => "null",
+        'email' => $item['email'],
+        'mode' => 'google',
+        'picture' => $item['picture'],
+        'verify' => 0,
+        'emailcrypt' => 'null'
+    ];
+
+    $response = usersController::ctrLoginSocialNetworks($data);
+
+
+}
+
+?>
+
 <!-- Top header -->
 <div class="container-fluid barraSuperior" id="top">
     <div class="container-fluid">
@@ -39,14 +90,14 @@
 
                             }
 
-                            echo '<li><a href="' . $config['frontend'] . 'perfil">Perfil</a></li>';
-                            echo '<li><a href="' . $config['frontend'] . 'logout">Cerrar sesion</a></li>';
+                            echo '<li><a href="' . $config['frontend'] . 'perfil/">Perfil</a></li>';
+                            echo '<li><a href="' . $config['frontend'] . 'logout/">Cerrar sesion</a></li>';
 
-                        } else if ($_SESSION["user"]["mode"] == "facebook") {
+                        } else if ($_SESSION["user"]["mode"] == "facebook" || $_SESSION["user"]["mode"] == "google") {
 
                             echo '<li> <img style="width: 2%;" class="img-circle" src="' . $_SESSION['user']['picture'] . '" alt=""> </li>';
                             echo '<li><a href="' . $config['frontend'] . 'perfil">Perfil</a></li>';
-                            echo '<li><a class="logout" href="' . $config['frontend'] . 'logout">Cerrar sesion</a></li>';
+                            echo '<li><a class="' . ($_SESSION['user']['mode'] == "google" ? 'logoutG' : 'logout') . '" href="' . $config['frontend'] . 'logout/">Cerrar sesion</a></li>';
 
 
                         }

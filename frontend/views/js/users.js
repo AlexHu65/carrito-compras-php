@@ -19,6 +19,13 @@ $(".facebook").click(function () {
 });
 
 
+$(".google2").click(function () {
+
+    localStorage.setItem("actualPath" , actualPath);
+
+});
+
+
 
 var validateEmail = false;
 

@@ -27,12 +27,15 @@ $register->ctrRegisterUser();
                     </p>
                 </div>
                 <!-- google register -->
-                <div class="col-sm-6 col-xs-12 google ">
-                    <p>
-                        <i class="fa fa-google"></i>
-                        Usando Google
-                    </p>
-                </div>
+                <a href="<?=$pathGoogle;?>">
+                    <div class="col-sm-6 col-xs-12 google ">
+                        <p>
+                            <i class="fa fa-google"></i>
+                            Usando Google
+                        </p>
+                    </div>
+                </a>
+
 
                 <!-- email register  -->
                 <form action="" method="post" onsubmit="return userRegister()">

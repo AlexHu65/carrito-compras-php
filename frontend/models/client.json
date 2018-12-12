@@ -1,0 +1,13 @@
+{
+  "web": {
+    "client_id": "62929483380-1qp0tdl0joaeannet6v0fl19vjt1crnp.apps.googleusercontent.com",
+    "project_id": "tienda-online-225303",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://www.googleapis.com/oauth2/v3/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_secret": "vPQTqR9vCNCeRWDE35AzJwS_",
+    "redirect_uris": [
+      "http://localhost:8080/Udemy/carrito-compras-php/frontend/index.php"
+    ]
+  }
+}

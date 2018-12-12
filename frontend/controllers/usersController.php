@@ -578,11 +578,31 @@ class usersController
         $response0 = usersModel::sqlShowUsers($table, $item, $value);
         $response1 = '';
 
-        if($response0){
+        if ($response0) {
 
             $duplicatedEmail = true;
 
-        }else{
+            if ($response0["modo"] != $data['mode']) {
+
+                echo '<script>
+                            swal({
+                            title: "¡Error en registro!",
+                            text: "Este email ' . $data['email'] . ' ya esta registrado con otro metodo de ingreso",
+                            type: "error",
+                            confirmButtonText: "Cerrar",
+                            closeOnConfirm: false
+                        }, function(isConfirm){
+                        
+                                history.back();
+                        
+                        });
+
+                       </script>';
+
+                $duplicatedEmail = false;
+            }
+
+        } else {
 
             $response1 = usersModel::sqlRegisterUser($table, $data);
 
@@ -615,7 +635,25 @@ class usersController
 
                 echo 'ok';
 
-            }else{
+            } else if ($response2["modo"] == "google") {
+
+                $_SESSION["user"] = [
+
+                    "status" => "ok",
+                    "id" => $response2["id"],
+                    "nombre" => $response2["nombre"],
+                    "picture" => $response2["foto"],
+                    "email" => $response2["email"],
+                    "pass" => $response2["password"],
+                    "mode" => $response2["modo"],
+
+                ];
+
+                echo '<script>
+                    window.location = localStorage.getItem("actualPath");
+                    </script>';
+
+            } else {
 
                 echo '';
             }

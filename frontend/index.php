@@ -21,6 +21,7 @@ require_once 'config/validators.php';
 
 /*Extensions*/
 require_once "extensions/PHPMailer/PHPMailerAutoload.php";
+require_once "extensions/vendor/autoload.php";
 
 
 /*Render vies and ctrTemplate*/
