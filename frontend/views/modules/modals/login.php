@@ -1,3 +1,10 @@
+<?php
+
+$login = new usersController();
+$login->ctrLoginUsers();
+
+?>
+
 <div class="modal fade modalForm" id="modalIngreso" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -8,14 +15,14 @@
                 </button>
             </div>
             <div class="modal-body">
-                <div class="col-sm-6 col-xs-12 facebook " id="btnFacebookRegister">
+                <div class="col-sm-6 col-xs-12 facebook">
                     <p>
                         <i class="fa fa-facebook"></i>
                         Usando Facebook
                     </p>
                 </div>
                 <!-- google register -->
-                <div class="col-sm-6 col-xs-12 google " id="btnFacebookRegister">
+                <div class="col-sm-6 col-xs-12 google">
                     <p>
                         <i class="fa fa-google"></i>
                         Usando Google
@@ -23,7 +30,7 @@
                 </div>
 
                 <!-- email register -->
-                <form action="#" method="post" onsubmit="return userRegister()">
+                <form action="#" method="post" onsubmit="">
                     <hr>
                     <div class="form-group">
                         <div class="input-group">
@@ -44,23 +51,15 @@
                         </div>
                     </div>
 
-                    <script type="text/javascript">(function (w, d) {
-                            var loader = function () {
-                                var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0];
-                                s.src = "https://cdn.iubenda.com/iubenda.js";
-                                tag.parentNode.insertBefore(s, tag);
-                            };
-                            if (w.addEventListener) {
-                                w.addEventListener("load", loader, false);
-                            } else if (w.attachEvent) {
-                                w.attachEvent("onload", loader);
-                            } else {
-                                w.onload = loader;
-                            }
-                        })(window, document);</script>
-                    <input type="submit" class="btn btn-primary btn-block" value="Enviar">
+                    <input type="submit" class="btn btn-primary btn-block btn-login" value="Enviar">
 
                 </form>
+            </div>
+            <div class="modal-footer">
+                Aun no tengo cuenta , registrate <a href="#modalRegistro" data-dismiss="modal"
+                                                    data-toggle="modal">aqu&iacute;</a>
+                <hr>
+                He olvidado mi <a href="#modalPassword" data-dismiss="modal" data-toggle="modal">contraseña</a>
             </div>
         </div>
     </div>

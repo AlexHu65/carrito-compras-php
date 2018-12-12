@@ -23,9 +23,45 @@
                         </button>
                     </li>
 
-                    <li><a href="#modalIngreso" data-toggle="modal">Ingresar</a></li>
+                    <?php if (isset($_SESSION["user"]) && $_SESSION["user"]["status"] == "ok") {
 
-                    <li><a href="#modalRegistro" data-toggle="modal">Crear cuenta</a></li>
+                        //  print_r($_SESSION["user"]);
+
+                        if ($_SESSION["user"]["mode"] == "direct") {
+
+                            if ($_SESSION["user"]["picture"] != "") {
+
+                                echo '<li> <img class="img-circle" src="' . $config['frontend'] . "views/img/users/" . $_SESSION['user']['id'] . "/" . $_SESSION['user']['picture'] . '" alt=""> </li>';
+
+                            } else {
+
+                                echo '<li><img style="width: 2%;" class="img-circle" src="' . $config['backend'] . 'views/img/usuarios/default/anonymous.png" alt=""></li>';
+
+                            }
+
+                            echo '<li><a href="' . $config['frontend'] . 'perfil">Perfil</a></li>';
+                            echo '<li><a href="' . $config['frontend'] . 'logout">Cerrar sesion</a></li>';
+
+                        } else if ($_SESSION["user"]["mode"] == "facebook") {
+
+                            echo '<li> <img style="width: 2%;" class="img-circle" src="' . $_SESSION['user']['picture'] . '" alt=""> </li>';
+                            echo '<li><a href="' . $config['frontend'] . 'perfil">Perfil</a></li>';
+                            echo '<li><a class="logout" href="' . $config['frontend'] . 'logout">Cerrar sesion</a></li>';
+
+
+                        }
+
+                        ?>
+
+
+                    <?php } else { ?>
+
+                        <li><a href="#modalIngreso" data-toggle="modal">Ingresar</a></li>
+
+                        <li><a href="#modalRegistro" data-toggle="modal">Crear cuenta</a></li>
+
+                    <?php } ?>
+
 
                     <li>
                         <div style="font-size: larger;" class="pull-right" id="carrito">

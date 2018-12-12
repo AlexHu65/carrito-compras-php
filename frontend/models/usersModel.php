@@ -10,20 +10,22 @@ class usersModel
     {
 
         /*User register*/
-        $stmt = connection::connect()->prepare("INSERT $table (nombre, password, email, modo, verificacion, emailEncriptado) VALUES (:nombre, :password, :email, :modo, :verificacion, :cryptmail)");
+        $stmt = connection::connect()->prepare("INSERT $table (nombre, password, email,modo, foto , verificacion, emailEncriptado) VALUES (:nombre, :password, :email, :modo, :foto , :verificacion, :cryptmail)");
 
         $stmt->bindParam(":nombre", $data['name'], PDO::PARAM_STR);
         $stmt->bindParam(":password", $data['password'], PDO::PARAM_STR);
         $stmt->bindParam(":email", $data['email'], PDO::PARAM_STR);
         $stmt->bindParam(":modo", $data['mode'], PDO::PARAM_STR);
+        $stmt->bindParam(":foto", $data['picture'], PDO::PARAM_STR);
         $stmt->bindParam(":verificacion", $data['verify'], PDO::PARAM_INT);
         $stmt->bindParam(":cryptmail", $data['emailcrypt'], PDO::PARAM_INT);
 
         if ($stmt->execute()) {
-            return true;
+            return 'ok';
 
         } else {
-            return false;
+
+            return 'error';
         }
 
 
@@ -56,11 +58,11 @@ class usersModel
 
         if($stmt -> execute()){
 
-            return true;
+            return 'ok';
 
         }else{
 
-            return false;
+            return 'error';
 
         }
 
@@ -70,6 +72,8 @@ class usersModel
 
 
     }
+
+
 
 
 }

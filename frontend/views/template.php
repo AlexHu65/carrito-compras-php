@@ -104,6 +104,8 @@ magnam nam nisi numquam odit quaerat, repellat, rerum sint sunt ullam, voluptate
     <script src="<?= $config['frontend'] ?>views/js/plugins/sweetalert.min.js"></script>
 
 
+
+
 </head>
 <body>
 <div class="supreme-container">
@@ -184,7 +186,7 @@ magnam nam nisi numquam odit quaerat, repellat, rerum sint sunt ullam, voluptate
 
             include 'modules/products/infoproduct.php';
 
-        } else if ($paths[0] == 'buscador' || $paths[0] == 'verificar') {
+        } else if ($paths[0] == 'buscador' || $paths[0] == 'verificar' || $paths[0] == "logout") {
 
             include 'modules/' . $paths[0] . '.php';
 
@@ -199,6 +201,8 @@ magnam nam nisi numquam odit quaerat, repellat, rerum sint sunt ullam, voluptate
         include "modules/slide.php";
         include "modules/destacados.php";
     }
+
+
 
 
     ?>
@@ -224,6 +228,7 @@ include 'modules/modals/search.php';
 include 'modules/modals/menu.php';
 include 'modules/modals/login.php';
 include 'modules/modals/register.php';
+include 'modules/modals/password.php';
 
 ?>
 
@@ -239,6 +244,32 @@ include 'modules/modals/register.php';
 </div>
 
 <input id="pathFrontEnd" type="hidden" value="<?= $config['frontend'] ?>">
+
+<!-- facebook login -->
+
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '203597013913742',
+            cookie     : true,
+            xfbml      : true,
+            version    : 'v3.2'
+        });
+
+        FB.AppEvents.logPageView();
+
+    };
+
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
 
 <script src="<?= $config['frontend'] ?>views/js/cabezote.js"></script>
 
@@ -257,6 +288,9 @@ include 'modules/modals/register.php';
 <script src="<?= $config['frontend'] ?>views/js/search.js"></script>
 
 <script src="<?= $config['frontend'] ?>views/js/users.js"></script>
+
+<script src="<?= $config['frontend'] ?>views/js/loginfb.js"></script>
+
 
 
 </body>
