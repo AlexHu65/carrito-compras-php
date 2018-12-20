@@ -4,8 +4,8 @@
 /*Controllers*/
 require_once 'controllers/templateController.php';
 require_once 'controllers/productsController.php';
-require_once  'controllers/slideController.php';
-require_once  'controllers/usersController.php';
+require_once 'controllers/slideController.php';
+require_once 'controllers/usersController.php';
 
 
 /*Models*/
@@ -29,3 +29,6 @@ $template = new templateController();
 
 
 $template->template();
+
+
+

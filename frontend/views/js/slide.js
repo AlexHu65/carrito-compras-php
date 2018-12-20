@@ -116,21 +116,28 @@ function stopSlide() {
 
 }
 
+
 /*Se interval play button*/
-setInterval(function () {
 
-    if (interruptSlide) {
+$(document).ready(function () {
 
-        interruptSlide = false;
-    } else {
+    setInterval(function () {
 
-        if (play && !pauseSlide) {
-            avanzar();
+        if (interruptSlide) {
+
+            interruptSlide = false;
+        } else {
+
+            if (play && !pauseSlide) {
+                avanzar();
+            }
         }
-    }
 
 
-}, 3000);
+    }, 3000);
+
+});
+
 
 /*Show arrows*/
 

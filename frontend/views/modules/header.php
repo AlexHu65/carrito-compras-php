@@ -82,21 +82,21 @@ if ($client->getAccessToken()) {
 
                             if ($_SESSION["user"]["picture"] != "") {
 
-                                echo '<li> <img class="img-circle" src="' . $config['frontend'] . "views/img/users/" . $_SESSION['user']['id'] . "/" . $_SESSION['user']['picture'] . '" alt=""> </li>';
+                                echo '<li> <img style="width: 30px; height: 30px;" class="img-circle" src="' . $config['frontend'] . "views/img/users/" . $_SESSION['user']['id'] . "/" . $_SESSION['user']['picture'] . '" alt=""> </li>';
 
                             } else {
 
-                                echo '<li><img style="width: 2%;" class="img-circle" src="' . $config['backend'] . 'views/img/usuarios/default/anonymous.png" alt=""></li>';
+                                echo '<li><img style="width: 30px; height: 30px;" class="img-circle" src="' . $config['backend'] . 'views/img/usuarios/default/anonymous.png" alt=""></li>';
 
                             }
 
-                            echo '<li><a href="' . $config['frontend'] . 'perfil/">Perfil</a></li>';
+                            echo '<li><a href="' . $config['frontend'] . 'profile/">Perfil</a></li>';
                             echo '<li><a href="' . $config['frontend'] . 'logout/">Cerrar sesion</a></li>';
 
                         } else if ($_SESSION["user"]["mode"] == "facebook" || $_SESSION["user"]["mode"] == "google") {
 
                             echo '<li> <img style="width: 2%;" class="img-circle" src="' . $_SESSION['user']['picture'] . '" alt=""> </li>';
-                            echo '<li><a href="' . $config['frontend'] . 'perfil">Perfil</a></li>';
+                            echo '<li><a href="' . $config['frontend'] . 'profile">Perfil</a></li>';
                             echo '<li><a class="' . ($_SESSION['user']['mode'] == "google" ? 'logoutG' : 'logout') . '" href="' . $config['frontend'] . 'logout/">Cerrar sesion</a></li>';
 
 

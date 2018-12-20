@@ -191,7 +191,6 @@ class usersController
 
     public static function ctrShowUsers($item, $value)
     {
-
         $table = 'usuarios';
 
         $response = usersModel::sqlShowUsers($table, $item, $value);
@@ -204,12 +203,11 @@ class usersController
     {
 
         $table = 'usuarios';
-
-        $response = usersModel::sqlMailUpdateUsers($table, $id, $item, $value);
-
+        $response = usersModel::sqlSingleUpdateUsers($table, $id, $item, $value);
         return $response;
 
     }
+
 
     public function ctrLoginUsers()
     {
@@ -363,7 +361,7 @@ class usersController
                     $item = "password";
                     $value = $passwordCrypt;
 
-                    $response = usersModel::sqlMailUpdateUsers($table, $id, $item, $value);
+                    $response = usersModel::sqlSingleUpdateUsers($table, $id, $item, $value);
 
                     if ($response == 'ok') {
 
@@ -649,10 +647,6 @@ class usersController
 
                 ];
 
-                echo '<script>
-                    window.location = localStorage.getItem("actualPath");
-                    </script>';
-
             } else {
 
                 echo '';
@@ -662,6 +656,29 @@ class usersController
 
 
     }
+
+    public static function ctrUpdateUserData($data)
+    {
+
+        $table = 'usuarios';
+        $response = usersModel::sqlUpdateUserData($table, $data);
+        return $response;
+
+    }
+
+    public static function ctrShowPuerchases($item, $value){
+        $table = 'compras';
+        $response = usersModel::sqlShowPurchases($table, $item, $value);
+        return $response;
+    }
+
+
+    public static function ctrShowComments($data){
+        $table = 'comentarios';
+        $response = usersModel::sqlShowComments($table, $data);
+        return $response;
+    }
+
 
 
 }

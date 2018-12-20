@@ -88,6 +88,12 @@ magnam nam nisi numquam odit quaerat, repellat, rerum sint sunt ullam, voluptate
 
     <link rel="stylesheet" href="<?= $config['frontend'] ?>views/css/slide.css">
 
+    <!-- slide css -->
+
+    <link rel="stylesheet" href="<?= $config['frontend'] ?>views/css/profile.css">
+
+
+
     <!-- Plugin jquery -->
 
     <script src="<?= $config['frontend'] ?>views/js/plugins/jquery.min.js"></script>
@@ -186,9 +192,11 @@ magnam nam nisi numquam odit quaerat, repellat, rerum sint sunt ullam, voluptate
 
             include 'modules/products/infoproduct.php';
 
-        } else if ($paths[0] == 'buscador' || $paths[0] == 'verificar' || $paths[0] == "logout") {
+        } else if ($paths[0] == 'buscador' || $paths[0] == 'verificar' || $paths[0] == "logout" || $paths[0] == "profile" ) {
 
             include 'modules/' . $paths[0] . '.php';
+
+
 
 
         } else {
@@ -229,6 +237,7 @@ include 'modules/modals/menu.php';
 include 'modules/modals/login.php';
 include 'modules/modals/register.php';
 include 'modules/modals/password.php';
+include 'modules/modals/comments.php';
 
 ?>
 
